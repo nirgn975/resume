@@ -1,0 +1,129 @@
+body{ 
+    background-color: #d8d8d8;
+    color: #1e1e1e;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+}
+
+a, a:hover{
+    text-decoration: none;
+    font-weight: 300;
+    font-style: italic;
+}
+
+h2{
+    text-shadow: .1em .1em .2em #767676;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/*---------------------------------------------- Navbar-side-fixed section ----------------------------------------------*/
+
+.navbar-default button{
+    float: left;
+}
+
+.mobile-button{
+    height: 0%;
+    width: 0%;
+    left: 80%;
+}
+
+.right-fixed-nav{
+    background-color: #1e1e1e;
+    color: #d8d8d8;
+    position: fixed;
+    height: 101%;
+    width: 20%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+}
+
+#profile-image{
+    border-radius: 100%;
+    border: .2em solid #d52b2b;
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+.nav-links li{
+    width: 100%;
+    font-size: 150%;
+}
+
+.fa{
+    color: #d52b2b;
+}
+
+.get-in-touch{
+    margin: 60% 0 5% 5%;
+}
+
+.get-in-touch li{
+    margin-left: 5%;
+}
+
+.get-in-touch li p{
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.get-in-touch a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #d8d8d8;
+    font-style: normal;
+}
+
+.social-links{
+    bottom: 3%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.social-links li{
+    display: inline-block;
+    padding: 3%;
+}
+
+/*---------------------------------------------- Content section ----------------------------------------------*/
+
+.general-section, .experince-section, .education-section, .skills-section{
+    margin: 0 0 1% 25%;
+}
+
+.general-section i, .experince-section i, .education-section i, .skills-section i{
+    margin: 0 2% 0 -5%;
+}
+
+.general-section{
+    padding-top: 1%;
+}
+
+.general-text{
+    margin: 0 0 0 10%;
+}
+
+.experince-section table, .education-section table{
+    margin: 0 0% 0 -5%;
+    width: 100%;
+}
+
+.skills-section .panel-group{
+    margin: 0 0 0 10%;
+    width: 85%;
+}
+
+.date{
+    width: 15%;
+    font-size: 120%;
+}
