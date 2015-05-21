@@ -3,6 +3,8 @@ body{
     color: #1e1e1e;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
 }
 
 a, a:hover{
@@ -37,7 +39,7 @@ h2{
     width: 20%;
 }
 
-@media(min-width:767px) {
+@media(min-width: 767px) {
     .navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
