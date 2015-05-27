@@ -26,11 +26,11 @@ var mobile = function() {
 		if($('.navbar').hasClass('open')){
 			$('.navbar').removeClass('open');
 			$('.navbar').animate({left: '-50%'}, 200);
-			$('body').animate({left: '0%'}, 200);
+			$('body').animate({left: '0%'}, 300);
 		}else{
 			$('.navbar').addClass('open');
 			$('.navbar').animate({left: '0%'}, 200);
-			$('body').animate({left: '20%'}, 200);
+			$('body').animate({left: '23%'}, 300);
 		}
 	});
 };
