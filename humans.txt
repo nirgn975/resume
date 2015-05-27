@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+Thanks for looked at my humans.txt!
+this site is made by nir galon.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript,
+    HTML5 boilerplate, jQuery, Modernizr, Normalize.css, GitHub
