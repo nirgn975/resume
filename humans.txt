@@ -1,10 +1,8 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
 
 Thanks for looked at my humans.txt!
 this site is made by nir galon.
 
-# TECHNOLOGY COLOPHON
-
+# The website made using:
     HTML5, CSS3, JavaScript,
-    HTML5 boilerplate, jQuery, Modernizr, Normalize.css, GitHub
+    HTML5 boilerplate, Bootstrap, jQuery, Modernizr, Normalize.css, GitHub pages
