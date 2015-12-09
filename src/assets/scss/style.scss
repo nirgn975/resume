@@ -2,7 +2,7 @@
 The main SCSS file for everything, yep
 */
 
-@import "main";
-@import "base";
+@import "0-tools/_vars";
+@import "0-tools/_base";
+@import "0-tools/materialize.min";
 @import "layout";
-@import "syntax-highlighting";
