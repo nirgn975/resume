@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en-us">
+    <head>
 
-  {% include head.html %}
+        {% include head.html %}
 
-  <body>
+    </head>
+    <body>
 
-    {% include header.html %}
+        {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+        <div class="">
+            {{ content }}
+        </div>
 
-    {% include footer.html %}
+        {% include footer.html %}
 
+        <!-- Import jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <!-- Import jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- JS -->
+        <script src="/assets/javascript/index.js"></script>
 
-  <!-- JS -->
-  <script src="/assets/javascript/index.js"></script>
-
-
-  </body>
+    </body>
 </html>
