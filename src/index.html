@@ -3,4 +3,15 @@ layout: default
 regenerate: true
 ---
 
-<h1>Hello world!</h1>
+<nav>
+    {% include nav.html %}
+</nav>
+
+<div id="sections">
+    {% include section-general.html %}
+    {% include section-work.html %}
+    {% include section-education.html %}
+    {% include section-skills.html %}
+    {% include section-projects.html %}
+    {% include section-contact.html %}
+</div>

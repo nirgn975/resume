@@ -1,7 +1,7 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 name: Resume
-description: Private resume website for Nir Galon
+description: Website to showcase my resume.
 url: nirgn975.github.io
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
