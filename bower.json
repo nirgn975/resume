@@ -1,0 +1,17 @@
+{
+  "name": "Resume",
+  "version": "0.0.0",
+  "authors": [
+    "Nir Galon <nirgn975@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
