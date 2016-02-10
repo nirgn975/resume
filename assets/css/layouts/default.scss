@@ -1,10 +1,16 @@
 body {
   background-color: $background-color;
-  text-color: $text-color;
+  color: $text-color;
 }
 
 a {
-  text-color: $link-color;
+  transition: color 0.5s ease;
+  color: $link-color;
+}
+
+a:hover {
+  transition: color 0.5s ease;
+  color: $secondary-color;
 }
 
 h5 {
@@ -14,4 +20,12 @@ h5 {
 hr {
   border: 1px solid #424242;
   margin: 45px 0;
+}
+
+.card-title h3 {
+  display: inline-block;
+}
+
+.card-title i {
+  padding: 5px;
 }

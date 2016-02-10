@@ -9297,10 +9297,17 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 body {
   background-color: #E0E0E0;
-  text-color: #424242; }
+  color: #212121; }
 
 a {
-  text-color: #9E9E9E; }
+  -webkit-transition: color 0.5s ease;
+          transition: color 0.5s ease;
+  color: #424242; }
+
+a:hover {
+  -webkit-transition: color 0.5s ease;
+          transition: color 0.5s ease;
+  color: #FFC107; }
 
 h5 {
   font-size: 1.4rem; }
@@ -9308,6 +9315,22 @@ h5 {
 hr {
   border: 1px solid #424242;
   margin: 45px 0; }
+
+.card-title h3 {
+  display: inline-block; }
+
+.card-title i {
+  padding: 5px; }
+
+#header-profile {
+  position: fixed;
+  width: 16.6666666667%; }
+
+.hide-me {
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  margin-top: 0; }
 
 .general-description {
   padding: 0 0 0 20px; }
@@ -9328,9 +9351,22 @@ hr {
 .work-description {
   padding: 10px 0 0 50px; }
 
+.education-place-title {
+  display: inline-block;
+  margin: 0; }
+
+.education-period {
+  font-size: 1.2rem; }
+
+.education-description {
+  padding: 10px 0 0 50px; }
+
 .chip {
   margin: 2px;
   background-color: #FFC107; }
+
+.collapsible-body {
+  background-color: #fff; }
 
 /* label color */
 .input-field label {
