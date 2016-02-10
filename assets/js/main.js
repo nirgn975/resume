@@ -10,4 +10,9 @@ $(function (){
   //   {selector: '#contact', offset: 0, callback: 'Materialize.showStaggeredList("#contact")' },
   // ];
   // Materialize.scrollFire(options);
+
+
+  // $('.collapsible').collapsible({
+  //   accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  // });
 });
