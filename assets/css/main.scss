@@ -1,13 +1,13 @@
-@import "tools/materialize.min";
 @import "tools/normalize";
+@import "tools/materialize";
 @import "tools/vars";
 
-@import "sections/header";
-@import "sections/contact";
-@import "sections/education";
-@import "sections/general";
-@import "sections/projects";
-@import "sections/skills";
-@import "sections/work";
+@import "layouts/default";
 
-@import "layouts/home";
+@import "sections/header";
+@import "sections/general";
+@import "sections/work";
+@import "sections/education";
+@import "sections/skills";
+@import "sections/projects";
+@import "sections/contact";

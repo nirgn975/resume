@@ -1,0 +1,17 @@
+body {
+  background-color: $background-color;
+  text-color: $text-color;
+}
+
+a {
+  text-color: $link-color;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+hr {
+  border: 1px solid #424242;
+  margin: 45px 0;
+}
