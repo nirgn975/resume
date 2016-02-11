@@ -1,6 +1,25 @@
 .education-place-title {
-  display: inline-block;
-  margin: 0;
+  margin: 0 0 0 55px;
+}
+
+#timeline-content {
+  margin-left: 10px;
+}
+
+#timeline-content > li {
+  margin: 0 0 50px -24px;
+}
+
+#timeline-content > li:before {
+    content:"·";
+    font-size:200px;
+    vertical-align:middle;
+    line-height:20px;
+    color: $primary-color;
+}
+
+.flow-text {
+  font-size: 1rem;
 }
 
 .education-period {
@@ -8,5 +27,31 @@
 }
 
 .education-description {
-  padding: 10px 0 0 50px;
+  padding: 10px 0 0 55px;
+}
+
+#education {
+  position: relative;
+}
+
+#education .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 120px;
+  height: 85%;
+  width: 4px;
+  margin-left: 10px;
+  background: $primary-color;
+}
+
+.education-period::before {
+  /* this is the vertical line */
+  content: '';
+  position: relative;
+  top: 120px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background: $primary-color;
 }

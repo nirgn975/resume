@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -9307,7 +9308,7 @@ a {
 a:hover {
   -webkit-transition: color 0.5s ease;
           transition: color 0.5s ease;
-  color: #FFC107; }
+  color: #E91E63; }
 
 h5 {
   font-size: 1.4rem; }
@@ -9328,10 +9329,20 @@ hr {
   position: fixed;
   width: 16.6666666667%; }
 
-.hide-me {
+h1.hide-me {
   visibility: hidden;
   font-size: 0;
   line-height: 0;
+  margin: 0 0 0.5rem 0; }
+
+#header-profile img {
+  width: 100%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 0 10px 0 rgba(0, 0, 0, 0.12); }
+
+#header-profile .card-panel {
+  margin-top: -10px; }
+
+#header-profile .card-panel p {
   margin-top: 0; }
 
 .general-description {
@@ -9342,11 +9353,20 @@ hr {
     list-style-type: circle; }
 
 .work-place-title {
-  display: inline-block;
-  margin: 0; }
+  margin: 0 0 0 55px; }
 
-.row {
-  margin: 20px 0 0 0; }
+#timeline-content {
+  margin-left: 10px; }
+
+#timeline-content > li {
+  margin: 0 0 50px -24px; }
+
+#timeline-content > li:before {
+  content: "·";
+  font-size: 200px;
+  vertical-align: middle;
+  line-height: 20px;
+  color: #03a9f4; }
 
 .flow-text {
   font-size: 1rem; }
@@ -9355,21 +9375,82 @@ hr {
   font-size: 1.2rem; }
 
 .work-description {
-  padding: 10px 0 0 50px; }
+  padding: 10px 0 0 55px; }
+
+#work {
+  position: relative; }
+
+#work .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 120px;
+  height: 85%;
+  width: 4px;
+  margin-left: 10px;
+  background: #03a9f4; }
+
+.working-period::before {
+  /* this is the vertical line */
+  content: '';
+  position: relative;
+  top: 120px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background: #03a9f4; }
 
 .education-place-title {
-  display: inline-block;
-  margin: 0; }
+  margin: 0 0 0 55px; }
+
+#timeline-content {
+  margin-left: 10px; }
+
+#timeline-content > li {
+  margin: 0 0 50px -24px; }
+
+#timeline-content > li:before {
+  content: "·";
+  font-size: 200px;
+  vertical-align: middle;
+  line-height: 20px;
+  color: #03a9f4; }
+
+.flow-text {
+  font-size: 1rem; }
 
 .education-period {
   font-size: 1.2rem; }
 
 .education-description {
-  padding: 10px 0 0 50px; }
+  padding: 10px 0 0 55px; }
+
+#education {
+  position: relative; }
+
+#education .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 120px;
+  height: 85%;
+  width: 4px;
+  margin-left: 10px;
+  background: #03a9f4; }
+
+.education-period::before {
+  /* this is the vertical line */
+  content: '';
+  position: relative;
+  top: 120px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background: #03a9f4; }
 
 .chip {
   margin: 2px;
-  background-color: #FFC107; }
+  background-color: #E91E63; }
 
 .collapsible-body {
   background-color: #fff; }
@@ -9414,3 +9495,9 @@ textarea.materialize-textarea:focus:not([readonly]).invalid {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #212121; }
+
+#send-email {
+  background-color: #E91E63; }
+
+#send-email:hover {
+  color: #424242; }

@@ -3,9 +3,22 @@
   width: 16.6666666667%;
 }
 
-.hide-me {
+h1.hide-me {
   visibility: hidden;
   font-size: 0;
   line-height: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+#header-profile img {
+  width: 100%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 0 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#header-profile .card-panel {
+  margin-top: -10px;
+}
+
+#header-profile .card-panel p {
   margin-top: 0;
 }
