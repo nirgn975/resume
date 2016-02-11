@@ -30,5 +30,5 @@ $ gulp
 
 You can easily deploy your site build to gh-pages branch with the command
 ```shell
-$gulp deploy
+$ gulp deploy
 ```
