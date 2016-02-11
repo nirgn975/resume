@@ -11,8 +11,22 @@ $(function (){
   // ];
   // Materialize.scrollFire(options);
 
+  $('#send-email').on('click', function() {
+    // Get all the fields.
+    var first_name = $('#first_name').text();
+    var last_name = $('#last_name').text();
+    var email = $('#email').text();
+    var body = $('#textarea1').text();
+    // Check if the one of the fields in invalid.
+    var email_has_invalid = $('#email').hasClass('invalid') || $('#textarea1').hasClass('invalid');
+    var $toastContent;
 
-  // $('.collapsible').collapsible({
-  //   accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-  // });
+    if (email_has_invalid) {
+      $toastContent = $("<span>Can't send the email please fix the marked field.</span>");
+    } else {
+      $toastContent = $("<span>Email send successfully.</span>");
+    }
+
+    Materialize.toast($toastContent, 5000);
+  });
 });

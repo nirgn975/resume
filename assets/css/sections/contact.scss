@@ -39,3 +39,9 @@
  .input-field .prefix.active {
    color: $text-color;
  }
+#send-email {
+  background-color: $secondary-color;
+}
+#send-email:hover {
+  color: $link-color;
+}

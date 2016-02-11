@@ -1,7 +1,7 @@
 My Resume
 ===
-
-
+My Resume (CV) website.
+The project build on Jekll and using GulpJS, BrowserSync, and MinifyJS for the build process.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ To install this project, you'll need the following things installed on your mach
 
 ## Usage
 
-**development mode**
+**Development mode**
 
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc.
 
@@ -26,23 +26,9 @@ This will give you file watching, browser synchronisation, auto-rebuild, CSS inj
 $ gulp
 ```
 
-**jekyll**
+**Deploy mode**
 
-As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
-
-
-
-## Deploy with Gulp
-
-You can easily deploy your site build to a gh-pages branch. First, follow the instructions at [gulp-gh-pages](https://github.com/rowoot/gulp-gh-pages) to get your branch prepared for the deployment and to install the module. Then, in `gulpfile.js` you'll want to include something like the code below. `gulp.src()` needs to be the path to your final site folder, which by default will be `_site`. If you change the `destination` in your `_config.yml` file, be sure to reflect that in your gulpfile.
-
-
-
-```javascript
-var deploy = require("gulp-gh-pages");
-
-gulp.task("deploy", ["jekyll-build"], function () {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy());
-});
+You can easily deploy your site build to gh-pages branch with the command
+```shell
+$gulp deploy
 ```
