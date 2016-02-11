@@ -11,6 +11,8 @@ $(function (){
   // ];
   // Materialize.scrollFire(options);
 
+  $(".button-collapse").sideNav();
+
   $('#send-email').on('click', function() {
     // Get all the fields.
     var first_name = $('#first_name').text();
