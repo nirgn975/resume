@@ -1,0 +1,38 @@
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+  #work .card-panel::before {
+    top: 120px;
+    height: 85%;
+  }
+
+  #education .card-panel::before {
+    top: 120px;
+    height: 85%;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 500px) and (max-width: 1000px){
+  #work .card-panel::before {
+    top: 100px;
+    height: 85%;
+  }
+
+  #education .card-panel::before {
+    top: 100px;
+    height: 85%;
+  }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 500px) {
+  #work .card-panel::before {
+    top: 65px;
+    height: 90%;
+  }
+
+  #education .card-panel::before {
+    top: 65px;
+    height: 90%;
+  }
+}

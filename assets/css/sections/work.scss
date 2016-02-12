@@ -34,17 +34,6 @@
   position: relative;
 }
 
-#work .card-panel::before {
-  /* this is the vertical line */
-  content: '';
-  position: absolute;
-  top: 120px;
-  height: 85%;
-  width: 4px;
-  margin-left: 10px;
-  background: $primary-color;
-}
-
 .working-period::before {
   /* this is the vertical line */
   content: '';
@@ -53,5 +42,15 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
+  background: $primary-color;
+}
+
+
+#work .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  width: 4px;
+  margin-left: 10px;
   background: $primary-color;
 }
