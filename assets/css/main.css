@@ -9325,6 +9325,19 @@ hr {
   height: 50px;
   vertical-align: text-bottom; }
 
+@media only screen and (max-width: 500px) {
+  .card-title i {
+    font-size: 3rem;
+    height: 40px;
+    padding: 5px; }
+  .card-title h3 {
+    font-size: 2.25rem;
+    margin: 0; }
+  #timeline-content h5 {
+    font-size: 1.2rem; }
+  .card-panel {
+    padding: 10px; } }
+
 #header-profile {
   position: fixed;
   width: 16.6666666667%; }
@@ -9408,16 +9421,6 @@ h1.hide-me {
 #work {
   position: relative; }
 
-#work .card-panel::before {
-  /* this is the vertical line */
-  content: '';
-  position: absolute;
-  top: 120px;
-  height: 85%;
-  width: 4px;
-  margin-left: 10px;
-  background: #03a9f4; }
-
 .working-period::before {
   /* this is the vertical line */
   content: '';
@@ -9426,6 +9429,14 @@ h1.hide-me {
   height: 50px;
   width: 50px;
   border-radius: 25px;
+  background: #03a9f4; }
+
+#work .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  width: 4px;
+  margin-left: 10px;
   background: #03a9f4; }
 
 .education-place-title {
@@ -9456,16 +9467,6 @@ h1.hide-me {
 #education {
   position: relative; }
 
-#education .card-panel::before {
-  /* this is the vertical line */
-  content: '';
-  position: absolute;
-  top: 120px;
-  height: 85%;
-  width: 4px;
-  margin-left: 10px;
-  background: #03a9f4; }
-
 .education-period::before {
   /* this is the vertical line */
   content: '';
@@ -9474,6 +9475,14 @@ h1.hide-me {
   height: 50px;
   width: 50px;
   border-radius: 25px;
+  background: #03a9f4; }
+
+#education .card-panel::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  width: 4px;
+  margin-left: 10px;
   background: #03a9f4; }
 
 .chip {
@@ -9529,3 +9538,30 @@ textarea.materialize-textarea:focus:not([readonly]).invalid {
 
 #send-email:hover {
   color: #424242; }
+
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+  #work .card-panel::before {
+    top: 120px;
+    height: 85%; }
+  #education .card-panel::before {
+    top: 120px;
+    height: 85%; } }
+
+/* Tablet */
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  #work .card-panel::before {
+    top: 100px;
+    height: 85%; }
+  #education .card-panel::before {
+    top: 100px;
+    height: 85%; } }
+
+/* Smartphone */
+@media only screen and (max-width: 500px) {
+  #work .card-panel::before {
+    top: 65px;
+    height: 90%; }
+  #education .card-panel::before {
+    top: 65px;
+    height: 90%; } }
