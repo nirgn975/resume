@@ -6,4 +6,4 @@ this site is made by Nir Galon.
 # The website made using:
     HTML5, CSS3, SASS, Materialize.
     JavaScript, jQuery, Jekll,
-    And it's hosting on GitHub pages.
+    hosting on GitHub pages.
