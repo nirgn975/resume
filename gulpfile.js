@@ -1,6 +1,9 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+var rename      = require("gulp-rename");
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var ghPages   	= require('gulp-gh-pages');
@@ -9,6 +12,17 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
+/**
+ * Handle JavaScript files.
+ * Minify all the files and concat them to one file.
+ */
+gulp.task('javascript', function(){
+  return gulp.src(['./assets/js/materialize.min.js', './assets/js/init.js', './assets/js/contact.js'])
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./_site/assets/js'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
 /**
  * Build the Jekyll Site
@@ -31,7 +45,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'javascript', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -43,6 +57,8 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Handle SASS files.
+ * Convert SASS to CSS, minify all the files and add prefix.
  */
 gulp.task('sass', function () {
     return gulp.src('assets/css/main.scss')
@@ -51,6 +67,7 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(rename("main.min.css"))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
@@ -63,7 +80,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch('assets/js/**', browserSync.reload);
+    gulp.watch('assets/js/**', ['javascript']);
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
 });
 
