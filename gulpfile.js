@@ -20,8 +20,9 @@ gulp.task('javascript', function(){
   return gulp.src(['./assets/js/materialize.min.js', './assets/js/init.js', './assets/js/contact.js'])
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./_site/assets/js'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('./_site/assets/js'));
+
 });
 
 /**
