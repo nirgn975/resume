@@ -7,6 +7,7 @@ var rename      = require("gulp-rename");
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var ghPages   	= require('gulp-gh-pages');
+var cssmin      = require('gulp-cssmin');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -69,6 +70,7 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(rename("main.min.css"))
+        .pipe(cssmin())
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));

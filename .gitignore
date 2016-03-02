@@ -4,7 +4,7 @@
 # This takes care of .tmp, .sass-cache, and many others
 .*/
 
-### Jekyll ###
+# Jekyll
 _site/
 .sass-cache/
 .jekyll-metadata
@@ -12,7 +12,7 @@ _site/
 # Linux
 *~
 
-# Always-ignore files and folders #
+# Always-ignore files and folders
 *.diff
 *.err
 *.log
@@ -24,7 +24,7 @@ _site/
 ._*
 *~
 
-# Ignore packages #
+# Ignore packages
 *.7z
 *.dmg
 *.gz
@@ -36,7 +36,9 @@ _site/
 
 # Packages
 node_modules/
+bower_components
 .tmp
 test/
 
-bower_components
+# Gulp temp files
+assets/css/main.min.css
