@@ -1,9 +1,16 @@
-.education-place-title {
-  margin: 0 0 0 55px;
+.education-place-title,
+#timeline-content p {
+  margin: 0 0 10px 55px;
 }
 
 #timeline-content {
   margin-left: 10px;
+}
+
+#timeline-content {
+  #education-description-hide-text {
+    margin: -20px 0 0 0;
+  }
 }
 
 #timeline-content > li {
@@ -30,8 +37,28 @@
   padding: 10px 0 0 55px;
 }
 
+.long-list {
+  background: linear-gradient(to top, #fff 1%, #000 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #education {
   position: relative;
+
+  #toggle-courses {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 0 0;
+
+    a {
+      background-color: $secondary-color;
+    }
+
+    a:hover {
+      color: $link-color;
+    }
+  }
 }
 
 .education-period::before {
