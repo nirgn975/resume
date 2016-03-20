@@ -7,13 +7,13 @@ $(function (){
   /**
    * Handle the "Show More" button in Education section.
    */
-  $('.education-description li').hide().filter(':lt(5)').show();
+  $('.education-description.long-list li').hide().filter(':lt(5)').show();
   $('#toggle-courses a').click(function(){
     // Check if the courses are open or close.
     if ($('.education-description').hasClass('long-list')) {
-      $('.education-description li:gt(4)').slideDown('slow');
+      $('#education-description-hide-text li:gt(4)').slideDown('slow');
     } else {
-      $('.education-description li:gt(4)').slideUp('slow');
+      $('#education-description-hide-text li:gt(4)').slideUp('slow');
     }
 
     $('#education-description-hide-text').toggleClass('long-list');
