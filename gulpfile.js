@@ -23,7 +23,6 @@ gulp.task('javascript', function(){
     .pipe(uglify())
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('./_site/assets/js'));
-
 });
 
 /**
@@ -47,7 +46,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'javascript', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['javascript','sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
