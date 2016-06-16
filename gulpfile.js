@@ -18,7 +18,11 @@ var messages = {
  * Minify all the files and concat them to one file.
  */
 gulp.task('javascript', function(){
-  return gulp.src(['./assets/js/materialize.min.js', './assets/js/init.js', './assets/js/contact.js'])
+  return gulp.src([
+    './assets/js/materialize.js',
+    './assets/js/init.js',
+    './assets/js/contact.js'
+  ])
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(browserSync.reload({stream:true}))
