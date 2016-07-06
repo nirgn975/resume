@@ -41,6 +41,7 @@ bower_components
 test/
 
 # Gulp temp files
-assets/css/main.css
-assets/css/main.min.css
-assets/css/main.css.map
+assets/scss/main.css
+assets/scss/main.min.css
+assets/scss/main.css.map
+assets/app.min.js
