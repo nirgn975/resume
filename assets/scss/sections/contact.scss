@@ -1,47 +1,41 @@
 /* label color */
- .input-field label {
-   color: $text-color;
- }
- input[type=text],
- input[type=email],
- textarea.materialize-textarea {
-   border-bottom: 1px solid $text-color;
-   box-shadow: 0 1px 0 0 $text-color;
- }
- /* label focus color */
- .input-field input[type=text]:focus + label,
- .input-field input[type=email]:focus + label,
- textarea.materialize-textarea:focus:not([readonly]):focus + label {
-   color: $text-color;
- }
- /* label underline focus color */
- .input-field input[type=text]:focus,
- .input-field input[type=email]:focus,
- textarea.materialize-textarea:focus:not([readonly]) {
-   border-bottom: 1px solid $text-color;
-   box-shadow: 0 1px 0 0 $text-color;
- }
- /* valid color */
- .input-field input[type=text].valid,
- .input-field input[type=email].valid,
- textarea.materialize-textarea:focus:not([readonly]).valid {
-   border-bottom: 1px solid $text-color;
-   box-shadow: 0 1px 0 0 $text-color;
- }
- /* invalid color */
- .input-field input[type=text].invalid,
- .input-field input[type=email].invalid,
- textarea.materialize-textarea:focus:not([readonly]).invalid {
-   border-bottom: 1px solid #E91E63;
-   box-shadow: 0 1px 0 0 #E91E63;
- }
- /* icon prefix focus color */
- .input-field .prefix.active {
-   color: $text-color;
- }
-#send-email {
-  background-color: $secondary-color;
+.input-field label {
+  color: $text-color;
 }
-#send-email:hover {
-  color: $link-color;
+
+input[type=text],
+input[type=email],
+textarea.materialize-textarea {
+  border-bottom: 1px solid $text-color;
+  box-shadow: 0 1px 0 0 $text-color;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+textarea.materialize-textarea:focus:not([readonly]):focus + label {
+  color: $text-color;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $text-color;
+  box-shadow: 0 1px 0 0 $text-color;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $text-color;
+}
+
+.right-align {
+   i, i:hover {
+    background-color: $secondary-color;
+
+    input[type=submit]:hover {
+      color: $link-color;
+    }
+  }
 }
