@@ -25,6 +25,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 $text-color;
 }
 
+/* valid color */
+.input-field input[type=text].valid,
+.input-field input[type=email].valid,
+textarea.materialize-textarea:focus:not([readonly]).valid {
+  border-bottom: 1px solid $text-color;
+  box-shadow: 0 1px 0 0 $text-color;
+}
+
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: $text-color;
