@@ -9,9 +9,11 @@
     }
   }
 
-  img {
-    width: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  a {
+    img {
+      width: 100%;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 0 10px 0 rgba(0, 0, 0, 0.12);
+    }
   }
 }
 
@@ -32,8 +34,13 @@ h1.hide-me {
 #slide-out {
   line-height: 21px;
 
-  img {
-    width: 100%;
+  a {
+    padding: 0;
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
   }
 
   #profiles li a {
@@ -42,7 +49,8 @@ h1.hide-me {
   }
 
   li {
-    padding: 0;
+    padding: 0 0 0 15px;
+    line-height: inherit;
   }
 
   p {
