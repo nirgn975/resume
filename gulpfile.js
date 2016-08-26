@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp            = require('gulp');
 var browserSync     = require('browser-sync');
 var cp              = require('child_process');
@@ -5,10 +7,7 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
 
-/**
- * Handle JavaScript files.
- * Minify all the files and concat them to one file.
- */
+// Minify all the files and concat them to one file.
 gulp.task('javascript', function(){
   return gulp.src([
     './assets/javascript/init.js'
@@ -20,9 +19,8 @@ gulp.task('javascript', function(){
     .pipe(gulp.dest('assets'));
 });
 
-/**
- * Build the Jekyll Site
- */
+
+// Build the Jekyll Site
 gulp.task('jekyll-build', function (done) {
     browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
@@ -30,17 +28,13 @@ gulp.task('jekyll-build', function (done) {
 });
 
 
-/**
- * Rebuild Jekyll & do page reload
- */
+// Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
 
 
-/**
- * Wait for jekyll-build, then launch the Server
- */
+// Wait for jekyll-build, then launch the Server
 gulp.task('browser-sync', ['javascript','sass', 'jekyll-build'], function() {
     browserSync({
         server: {
@@ -83,10 +77,7 @@ gulp.task('sass', function () {
 });
 
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
+// Watch html, md, scss, js files, run jekyll & reload BrowserSync
 gulp.task('watch', function () {
   gulp.watch([
     'assets/scss/*/*.scss',
@@ -97,17 +88,12 @@ gulp.task('watch', function () {
 });
 
 
-/**
- * Waite for jekyll-build task and deploy the site to gh-pages branch.
- */
+// Waite for jekyll-build task and deploy the site to gh-pages branch.
 gulp.task('deploy', ['sass', 'javascript', 'jekyll-build'], function() {
   return gulp.src('./_site/**/*')
     .pipe($.ghPages());
 });
 
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
+// Default task.
 gulp.task('default', ['browser-sync', 'watch']);
