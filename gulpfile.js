@@ -20,37 +20,8 @@ gulp.task('javascript', function(){
 });
 
 
-// Build the Jekyll Site
-gulp.task('jekyll-build', function (done) {
-    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
-});
-
-
-// Rebuild Jekyll & do page reload
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
-});
-
-
-// Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['javascript','sass', 'jekyll-build'], function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        },
-        notify: false
-    });
-});
-
-
-/**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
- * Handle SASS files.
- * Convert SASS to CSS, minify all the files and add prefix.
- */
-gulp.task('sass', function () {
+// Compile SCSS to CSS, minify and add prefix.
+gulp.task('scss', function () {
   const AUTOPREFIXER_BROWSERS = [
     'ie >= 10',
     'ie_mob >= 10',
@@ -77,19 +48,44 @@ gulp.task('sass', function () {
 });
 
 
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+
+// Rebuild Jekyll & do page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+
+
+// Wait for jekyll-build, then launch the Server
+gulp.task('browser-sync', ['javascript','scss', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        },
+        notify: false
+    });
+});
+
+
 // Watch html, md, scss, js files, run jekyll & reload BrowserSync
 gulp.task('watch', function () {
   gulp.watch([
     'assets/scss/*/*.scss',
     'assets/scss/*.scss',
-  ], ['sass']);
+  ], ['scss']);
     gulp.watch('assets/javascript/**', ['javascript']);
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
 });
 
 
 // Waite for jekyll-build task and deploy the site to gh-pages branch.
-gulp.task('deploy', ['sass', 'javascript', 'jekyll-build'], function() {
+gulp.task('deploy', ['scss', 'javascript', 'jekyll-build'], function() {
   return gulp.src('./_site/**/*')
     .pipe($.ghPages());
 });
