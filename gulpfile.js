@@ -1,17 +1,9 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var concat      = require('gulp-concat');
-var uglify      = require('gulp-uglify');
-var rename      = require("gulp-rename");
-var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
-var ghPages   	= require('gulp-gh-pages');
-var cssmin      = require('gulp-cssmin');
+var gulp            = require('gulp');
+var browserSync     = require('browser-sync');
+var cp              = require('child_process');
+var gulpLoadPlugins = require('gulp-load-plugins');
 
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+const $ = gulpLoadPlugins();
 
 /**
  * Handle JavaScript files.
@@ -21,8 +13,8 @@ gulp.task('javascript', function(){
   return gulp.src([
     './assets/javascript/init.js'
   ])
-    .pipe(concat('app.min.js'))
-    .pipe(uglify())
+    .pipe($.concat('app.min.js'))
+    .pipe($.uglify())
     .pipe(gulp.dest('./_site/assets'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('assets'));
@@ -32,7 +24,7 @@ gulp.task('javascript', function(){
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
+    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -65,14 +57,26 @@ gulp.task('browser-sync', ['javascript','sass', 'jekyll-build'], function() {
  * Convert SASS to CSS, minify all the files and add prefix.
  */
 gulp.task('sass', function () {
+  const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+
     return gulp.src('assets/scss/main.scss')
-        .pipe(sass({
+        .pipe($.sass({
             includePaths: ['css'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(rename("main.min.css"))
-        .pipe(cssmin())
+        .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe($.rename("main.min.css"))
+        .pipe($.cssmin())
         .pipe(gulp.dest('_site/assets/scss'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/scss'));
@@ -98,7 +102,7 @@ gulp.task('watch', function () {
  */
 gulp.task('deploy', ['sass', 'javascript', 'jekyll-build'], function() {
   return gulp.src('./_site/**/*')
-    .pipe(ghPages());
+    .pipe($.ghPages());
 });
 
 
