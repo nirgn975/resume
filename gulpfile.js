@@ -8,7 +8,7 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
 // Minify all the files and concat them to one file.
-gulp.task('javascript', function(){
+gulp.task('javascript', function() {
   return gulp.src([
     './assets/javascript/init.js'
   ])
@@ -21,7 +21,7 @@ gulp.task('javascript', function(){
 
 
 // Compile SCSS to CSS, minify and add prefix.
-gulp.task('scss', function () {
+gulp.task('scss', function() {
   const AUTOPREFIXER_BROWSERS = [
     'ie >= 10',
     'ie_mob >= 10',
@@ -40,7 +40,7 @@ gulp.task('scss', function () {
             onError: browserSync.notify
         }))
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-        .pipe($.rename("main.min.css"))
+        .pipe($.rename('main.min.css'))
         .pipe($.cssmin())
         .pipe(gulp.dest('_site/assets/scss'))
         .pipe(browserSync.reload({stream:true}))
@@ -49,21 +49,15 @@ gulp.task('scss', function () {
 
 
 // Build the Jekyll Site
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', function(done) {
     browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
 
-// Rebuild Jekyll & do page reload
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
-});
-
-
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['javascript','scss', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['javascript', 'scss', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -80,7 +74,7 @@ gulp.task('watch', function () {
     'assets/scss/*.scss',
   ], ['scss']);
     gulp.watch('assets/javascript/**', ['javascript']);
-    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-build']);
 });
 
 
