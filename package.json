@@ -1,39 +1,30 @@
 {
   "name": "resume",
   "version": "2.0.0",
-  "description": "A Resume website project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "description": "A Resume website project including full setup for Jekyll, GulpJS, SASS, BrowserSync, etc.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp",
+    "gulp deploy": "gulp deploy"
   },
   "author": "Nir Galon",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.8.0",
-    "gulp": "^3.9.0",
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.1.7",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-load-plugins": "^1.2.4",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.5.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nirgn975/resume.git"
   },
-  "keywords": [
-    "jekyll",
-    "gulp",
-    "sass",
-    "browsersync",
-    "gh-pages",
-    "minify",
-    "uglify",
-    "concat",
-    "autoprefixer"
-  ],
   "bugs": {
     "url": "https://github.com/nirgn975/resume/issues"
   },

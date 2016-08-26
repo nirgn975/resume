@@ -1,5 +1,8 @@
 My Resume
 ===
+
+[![license](https://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/nirgn975/Resume/blob/master/LICENSE)
+
 My Resume (CV) website.
 The project build on Jekll and using GulpJS, BrowserSync, and MinifyJS for the build process.
 
@@ -8,8 +11,7 @@ The project build on Jekll and using GulpJS, BrowserSync, and MinifyJS for the b
 To install this project, you'll need the following things installed on your machine.
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer.
-3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp`
+2. [NodeJS](http://nodejs.org).
 
 ## Local Installation
 
@@ -23,12 +25,12 @@ To install this project, you'll need the following things installed on your mach
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc.
 
 ```shell
-$ gulp
+$ npm run gulp
 ```
 
 **Deploy mode**
 
 You can easily deploy your site build to gh-pages branch with the command
 ```shell
-$ gulp deploy
+$ npm run gulp deploy
 ```
