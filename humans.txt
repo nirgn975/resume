@@ -1,0 +1,14 @@
+# humanstxt.org/
+
+Thanks for looked at my humans.txt!
+
+/* TEAM */
+Developer: nirgn975.
+GitHub: nirgn975
+Twitter: nirgn975.
+
+/* SITE */
+Last update: 2016/10/06
+Standards: HTML5, CSS3, JavaScript.
+Components: Modernizr, SASS, jQuery.
+Software: Materialize, Jekll.

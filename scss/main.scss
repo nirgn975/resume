@@ -1,0 +1,15 @@
+@import "tools/normalize";
+@import "tools/vars";
+
+@import "layouts/default";
+
+@import "sections/header";
+@import "sections/general";
+@import "sections/work";
+@import "sections/education";
+@import "sections/skills";
+@import "sections/projects";
+@import "sections/presentations";
+@import "sections/contact";
+
+@import "layouts/media-queries";
