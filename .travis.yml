@@ -21,4 +21,4 @@ install:
 
 script:
   - npm run gulp build
-  - htmlproofer ./_site --disable_external=true
+  - htmlproofer ./_site --disable-external
