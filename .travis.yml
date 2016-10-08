@@ -12,6 +12,7 @@ env:
 
 before_install:
   - npm install npm -g
+  - bundle update
 
 install:
   - npm install
