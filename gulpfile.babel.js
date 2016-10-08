@@ -130,20 +130,6 @@ gulp.task('build', () =>
   )
 );
 
-// Edit config file for jekyll build.
-gulp.task('before-gh-deploy', () => {
-  return gulp.src('./_config.yml')
-    .pipe($.replace('baseurl: ""', 'baseurl: "/Resume"'))
-    .pipe(gulp.dest('./'));
-});
-
-// Revert config file for gulp serve in local.
-gulp.task('cleanup-gh-deploy', () => {
-  return gulp.src('./_config.yml')
-    .pipe($.replace('baseurl: "/Resume"', 'baseurl: ""'))
-    .pipe(gulp.dest('./'));
-});
-
 // Depoly website to gh-pages.
 gulp.task('gh-pages', () => {
   return gulp.src('./_site/**/*')
@@ -152,7 +138,6 @@ gulp.task('gh-pages', () => {
 
 gulp.task('deploy', () => {
   runSequence(
-    'before-gh-deploy',
     'scss',
     'jekyll-build',
     'minify-html',
@@ -160,6 +145,5 @@ gulp.task('deploy', () => {
     'generate-service-worker',
     'minify-images',
     'gh-pages',
-    'cleanup-gh-deploy'
   )
 });
