@@ -41,9 +41,9 @@ gulp.task('scripts', () => {
     //       to be correctly concatenated
     './_scripts/main.js'
   ])
-    .pipe($.babel())
     .pipe($.concat('main.min.js'))
-    .pipe($.uglify({preserveComments: 'some'}))
+    .pipe($.babel())
+    // .pipe($.uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('scripts'));
 });
 

@@ -37,7 +37,4 @@
     "type": "git",
     "url": "git@github.com:nirgn975/Resume.git"
   },
-  "dependencies": {
-    "jquery": "^3.1.1"
-  }
 }
