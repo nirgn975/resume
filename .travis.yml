@@ -16,9 +16,9 @@ before_install:
 
 install:
   - npm install
-  - npm install -g gulp
-  - gem install jekyll html-proofer
+  - bundle install
+  - gem install html-proofer
 
 script:
-  - gulp build
+  - npm run gulp build
   - htmlproofer ./_site
