@@ -1,18 +1,13 @@
-# .gitignore
-
-# Ignore hidden folders
-# This takes care of .tmp, .sass-cache, and many others
-.*/
-
-# Jekyll
+### Jekyll ###
 _site/
 .sass-cache/
 .jekyll-metadata
+scripts/
+Gemfile.lock
+.publish/
+css/
 
-# Linux
-*~
-
-# Always-ignore files and folders
+### Always-ignore files and folders ###
 *.diff
 *.err
 *.log
@@ -24,7 +19,7 @@ _site/
 ._*
 *~
 
-# Ignore packages
+### Ignore packages ###
 *.7z
 *.dmg
 *.gz
@@ -34,14 +29,29 @@ _site/
 *.tar
 *.zip
 
-# Packages
+### Packages ###
 node_modules/
 bower_components
-.tmp
-test/
 
-# Gulp temp files
-assets/scss/main.css
-assets/scss/main.min.css
-assets/scss/main.css.map
-assets/app.min.js
+### Sass ###
+.sass-cache/
+*.css.map
+
+### Linux ###
+*~
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Linux ###
+*~
+.Trash-*
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

@@ -1,26 +1,22 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#E0E0E0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/scss/main.min.css">
-  </head>
+<html>
+
+  {% include head.html %}
+
   <body>
 
-  {{ content }}
+    {{ content }}
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  <script async src="assets/app.min.js"></script>
+  <script async src="{{ "/scripts/main.min.js" | prepend: site.baseurl }}"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("{{ "/sw.js" | prepend: site.baseurl }}").then(function() {
+      console.log("Service Worker Registered");
+    });
+  }
+  </script>
   </body>
+
 </html>

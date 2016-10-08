@@ -11,8 +11,9 @@
 }
 
 #timeline-content > li:before {
-    content: "·";
-    font-size: 200px;
+    content: "•";
+    font-size: 100px;
+    margin-left: 8px;
     vertical-align: middle;
     line-height: 20px;
     color: $primary-color;
