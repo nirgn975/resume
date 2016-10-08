@@ -111,8 +111,7 @@ gulp.task('generate-service-worker', function(callback) {
 
   swPrecache.write(path.join(rootDir, 'sw.js'), {
     staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,json}'],
-    stripPrefix: rootDir,
-    replacePrefix: '/Resume'
+    stripPrefix: rootDir
   }, callback);
 });
 
@@ -130,36 +129,28 @@ gulp.task('build', () =>
   )
 );
 
-// Edit config file for jekyll build.
-gulp.task('before-gh-deploy', () => {
-  return gulp.src('./_config.yml')
-    .pipe($.replace('baseurl: ""', 'baseurl: "/Resume"'))
-    .pipe(gulp.dest('./'));
+// Remove 404.html from service worker, because firebase don't serve the page
+// in a GET request, and return 404 code.
+gulp.task('cleanup-sw-deploy', () => {
+  return gulp.src('./_site/sw.js')
+    .pipe($.replace('/404.html', ''))
+    .pipe(gulp.dest('./_site/'));
 });
 
-// Revert config file for gulp serve in local.
-gulp.task('cleanup-gh-deploy', () => {
-  return gulp.src('./_config.yml')
-    .pipe($.replace('baseurl: "/Resume"', 'baseurl: ""'))
-    .pipe(gulp.dest('./'));
-});
+gulp.task('jekyll-build-for-deploy', $.shell.task([ 'jekyll build' ]));
 
-// Depoly website to gh-pages.
-gulp.task('gh-pages', () => {
-  return gulp.src('./_site/**/*')
-    .pipe($.ghPages());
-});
+gulp.task('firebase', $.shell.task([ 'firebase deploy' ]));
 
 gulp.task('deploy', () => {
   runSequence(
-    'before-gh-deploy',
     'scss',
-    'jekyll-build',
+    'scripts',
+    'jekyll-build-for-deploy',
     'minify-html',
     'css',
     'generate-service-worker',
+    'cleanup-sw-deploy',
     'minify-images',
-    'gh-pages',
-    'cleanup-gh-deploy'
+    'firebase'
   )
 });
