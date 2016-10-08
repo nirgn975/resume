@@ -43,7 +43,7 @@ gulp.task('scripts', () => {
   ])
     .pipe($.concat('main.min.js'))
     .pipe($.babel())
-    // .pipe($.uglify({preserveComments: 'some'}))
+    .pipe($.uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('scripts'));
 });
 
