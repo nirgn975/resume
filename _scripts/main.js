@@ -1,5 +1,5 @@
 // Activatethe mobile side nav.
-$(".button-collapse").sideNav();
+// document.getElementsByClassName(".button-collapse").sideNav();
 
 /**
  * Handle the "Show More" button in Education section.
