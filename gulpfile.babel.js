@@ -129,20 +129,28 @@ gulp.task('build', () =>
   )
 );
 
-// Depoly website to gh-pages.
-gulp.task('gh-pages', () => {
-  return gulp.src('./_site/**/*')
-    .pipe($.ghPages());
+// Remove 404.html from service worker, because firebase don't serve the page
+// in a GET request, and return 404 code.
+gulp.task('cleanup-sw-deploy', () => {
+  return gulp.src('./_site/sw.js')
+    .pipe($.replace('/404.html', ''))
+    .pipe(gulp.dest('./_site/'));
 });
+
+gulp.task('jekyll-build-for-deploy', $.shell.task([ 'jekyll build' ]));
+
+gulp.task('firebase', $.shell.task([ 'firebase deploy' ]));
 
 gulp.task('deploy', () => {
   runSequence(
     'scss',
-    'jekyll-build',
+    'scripts',
+    'jekyll-build-for-deploy',
     'minify-html',
     'css',
     'generate-service-worker',
+    'cleanup-sw-deploy',
     'minify-images',
-    'gh-pages',
+    'firebase'
   )
 });
