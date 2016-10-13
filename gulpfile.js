@@ -10,6 +10,7 @@ const $ = gulpLoadPlugins();
 // Minify all the files and concat them to one file.
 gulp.task('javascript', function() {
   return gulp.src([
+    './assets/javascript/materialize.js',
     './assets/javascript/init.js'
   ])
     .pipe($.concat('app.min.js'))
@@ -47,6 +48,12 @@ gulp.task('scss', function() {
         .pipe(gulp.dest('assets/scss'));
 });
 
+// Copy fonts.
+gulp.task('fonts', function() {
+  gulp.src('assets/fonts')
+    .pipe(gulp.dest('_site/assets'))
+});
+
 
 // Build the Jekyll Site
 gulp.task('jekyll-build', function(done) {
@@ -57,7 +64,7 @@ gulp.task('jekyll-build', function(done) {
 
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['javascript', 'scss', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['javascript', 'scss', 'jekyll-build', 'fonts'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -79,7 +86,7 @@ gulp.task('watch', function () {
 
 
 // Waite for jekyll-build task and deploy the site to gh-pages branch.
-gulp.task('deploy', ['scss', 'javascript', 'jekyll-build'], function() {
+gulp.task('deploy', ['scss', 'javascript', 'jekyll-build', 'fonts'], function() {
   return gulp.src('./_site/**/*')
     .pipe($.ghPages());
 });
