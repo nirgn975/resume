@@ -48,7 +48,7 @@ gulp.task('scss', function() {
 });
 
 
-// Build the Jekyll Site
+// Build the Jekyll Site.
 gulp.task('jekyll-build', function(done) {
     browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
@@ -56,7 +56,7 @@ gulp.task('jekyll-build', function(done) {
 });
 
 
-// Wait for jekyll-build, then launch the Server
+// Wait for jekyll-build, then launch the Server.
 gulp.task('browser-sync', ['javascript', 'scss', 'jekyll-build'], function() {
     browserSync({
         server: {
@@ -67,7 +67,7 @@ gulp.task('browser-sync', ['javascript', 'scss', 'jekyll-build'], function() {
 });
 
 
-// Watch html, md, scss, js files, run jekyll & reload BrowserSync
+// Watch html, md, scss, js files, run jekyll & reload BrowserSync.
 gulp.task('watch', function () {
   gulp.watch([
     'assets/scss/*/*.scss',
