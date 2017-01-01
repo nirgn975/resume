@@ -4,8 +4,8 @@
   "description": "A Resume website project including full setup for Jekyll, GulpJS, SASS, BrowserSync, etc.",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp",
-    "gulp deploy": "gulp deploy"
+    "start": "gulp",
+    "deploy": "gulp deploy"
   },
   "author": "Nir Galon",
   "license": "ISC",
