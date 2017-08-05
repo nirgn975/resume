@@ -40,6 +40,9 @@ bower_components
 .tmp
 test/
 
+### npm ###
+package-lock.json
+
 # Gulp temp files
 assets/scss/main.css
 assets/scss/main.min.css

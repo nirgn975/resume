@@ -22,8 +22,17 @@ hr {
   margin: 45px 0;
 }
 
+.card-panel {
+  svg {
+    vertical-align: middle;
+    margin-top: -1.5rem;
+  }
+}
+
 .card-title h3 {
   display: inline-block;
+  font-size: 2.9rem;
+  margin: 1rem 0;
 }
 
 .card-title i {
