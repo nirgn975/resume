@@ -1,0 +1,32 @@
+html, body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #E0E0E0;
+}
+
+#header {
+  top: 0;
+  position: fixed;
+  margin: 1%;
+}
+
+.category-header h2 {
+  display: inline-block;
+}
+
+.skills div.block {
+  margin-left: 3%;
+}
+
+.skills span {
+  margin-right: 1%;
+}
+
+.projects div.card div.description {
+  margin: 4% 2%;
+}
