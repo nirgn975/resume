@@ -1,10 +1,8 @@
 My Resume
-===
 
-[![license][license-image]][license-url] [![Donate][donate-image]][donate-url]
 
 My Resume (CV) website.
-The project build on Jekll and using GulpJS, BrowserSync, and MinifyJS for the build process.
+The project build on Jekyll and using GulpJS, BrowserSync, and MinifyJS for the build process.
 
 ## Prerequisites
 
