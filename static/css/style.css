@@ -27,6 +27,11 @@ body {
   margin-right: 1%;
 }
 
+.skills img {
+  width: 1.5rem;
+  vertical-align: bottom;
+}
+
 .projects div.card div.description {
   margin: 4% 2%;
 }
