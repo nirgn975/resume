@@ -4,9 +4,26 @@ html, body {
   margin: 0;
 }
 
+:root {
+  --color-background: #E0E0E0;
+  --color-text: rgba(0, 0, 0, .87);
+  --color-text-meta: rgba(0,0,0,.4);
+  --color-border: rgba(0, 0, 0, .3);
+  --color-header-background: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-background: #303030;
+  --color-text: rgba(255, 255, 255, .6);
+  --color-text-meta: rgba(255, 255, 255, .25);
+  --color-border: rgba(255, 255, 255, .3);
+  --color-header-background: #424242;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background: #E0E0E0;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 #header {
@@ -15,8 +32,39 @@ body {
   margin: 1%;
 }
 
+div.ui.card,
+.ui.form .field input,
+.ui.form .field textarea {
+  background: var(--color-header-background);
+  box-shadow: none;
+}
+
+div.ui.card .content .header,
+.ui.items .item .content .header,
+.ui.items .item .content .meta,
+.ui.form .field label {
+  color: var(--color-text);
+}
+
+div.ui.card .content .meta, div.ui.card .content.extra {
+  color: var(--color-text-meta);
+}
+
+#header .description {
+  color: var(--color-text);
+}
+
+#header .content a {
+  color: var(--color-text);
+}
+
+span.category-header i.icon {
+  font-size: 2em;
+}
+
 .category-header h2 {
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .skills div.block {
@@ -36,8 +84,17 @@ body {
   margin: 4% 2%;
 }
 
+.projects .repos .column div.ui.card {
+  height: 100%;
+}
+
 .blog .featured-image img {
   width: 100%;
+  margin: .5rem 0;
+}
+
+.blog .posts .column div.ui.card {
+  height: 100%;
 }
 
 .timeline-container {
@@ -48,8 +105,7 @@ body {
 .timeline-container .timeline-item {
 	padding: 1em 2em 2em;
 	position: relative;
-	color: rgba(0,0,0, .7);
-	border-left: 2px solid rgba(0,0,0, .3);
+	border-left: 2px solid var(--color-border);
 }
 
 .timeline-container .timeline-item h3 {
@@ -69,10 +125,29 @@ body {
 	left: -.6rem;
 	border-radius: 10px;
 	content: '';
-	border: 2px solid rgba(0,0,0, .3);
-	background: #E0E0E0;
+	border: 2px solid var(--color-border);
+	background: var(--color-background);
 }
 
 .timeline-container .timeline-item:last-child {
-  border-image: linear-gradient(to bottom, rgba(0,0,0, .3) 60%, rgba(0,0,0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, var(--color-border) 60%, var(--color-border)) 1 100%;
+}
+
+.contact form .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact form .row .field {
+  width: 49%;
+}
+
+.contact button.ui {
+  float: right;
+  background: #babbbc;
+}
+
+.contact button.ui:hover {
+  float: right;
+  background: #888888;
 }
