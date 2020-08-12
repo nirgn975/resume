@@ -1,7 +1,38 @@
-$('.projects .card .image').dimmer({
-  on: 'hover'
-});
+/**
+ *
+ */
+async function getReposData() {
+  const repos = [
+    { code: 'generator-jekyll-starter-kit', name: 'Jekyll Starter Kit Generator' },
+    { code: 'stories-of-a-lifelong-student', name: 'Stories Of A Lifelong Student' },
+    { code: 'challenges', name: 'Random Challenges Solutions' },
+    { code: 'angular-sanic-seed-project', name: 'Angular Sanic Seed Project' },
+    { code: 'google-keep-api', name: 'Google Keep API' },
+    { code: 'google-play-services-oauth', name: 'Google Play Services Oauth' },
+    { code: 'googletasks-app', name: 'Google Tasks App' },
+    { code: 'awesome-cyber-awesome', name: 'Awesome Cyber Awesome Lists' },
+  ];
 
+  for (repo of repos) {
+    await fetch(`https://api.github.com/repos/nirgn975/${repo.code}`)
+      .then(response => response.json())
+      .then(data => {
+        repo.value = {
+          name: data.name,
+          description: data.description,
+          url: data.html_url,
+          stars: data.stargazers_count,
+          forks: data.forks,
+        };
+      });
+  };
+
+  return repos;
+}
+
+/**
+ * Add `dark` theme attribute to body.
+ */
 function switchTheme(element) {
   if ($('body').attr('data-theme')) {
     $('body').removeAttr('data-theme');
@@ -18,9 +49,21 @@ $(document).ready(function() {
     .then(data => {
       const channel = data.childNodes[0].childNodes[0];
 
-
+      let posts = 0;
       for (let entity of channel.childNodes.values()) {
+        if (posts > 3) {
+          break;
+        }
+
         if (entity.nodeName == 'item') {
+          posts += 1;
+
+          // Separate the text of the post from it's banner image.
+          const postText = entity.getElementsByTagName("description")[0].textContent.replace('src="/', 'src="https://lifelongstudent.io/');
+          const regex = /<div class="featured-image">\n.+\n.+<\/div>/g;
+          const postImage = postText.match(regex);
+          const postDescription = postText.replace(regex, '');
+
           $('.posts').append(`<div class="four wide column">
             <div class="ui card">
               <div class="content">
@@ -28,12 +71,28 @@ $(document).ready(function() {
                 <div class="meta">
                   <span>${entity.getElementsByTagName("pubDate")[0].textContent.split(':')[0].slice(0, -2)}</span>
                 </div>
-                <p>${entity.getElementsByTagName("description")[0].textContent.replace('src="/', 'src="https://lifelongstudent.io/')}</p>
+                <div class="blurring dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <a href="${entity.getElementsByTagName("link")[0].textContent}" target="_blank">
+                          <div class="ui inverted button">Go to Post</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  ${postImage}
+                </div>
+                <p>${postDescription}</p>
               </div>
             </div>
           </div>`);
         }
       }
+    }).then(_ => {
+      $('.blog .card .image').dimmer({
+        on: 'hover'
+      });
     });
 
   // Get repos data from GitHub.
@@ -42,7 +101,6 @@ $(document).ready(function() {
       repos.sort((a, b) => (a.value.stars < b.value.stars) ? 1 : -1);
 
       for (repo of repos) {
-        console.log("add something", repo);
         $('.repos').append(`<div class="four wide column">
           <div class="ui card four wide column">
             <div class="content">
@@ -78,41 +136,9 @@ $(document).ready(function() {
           </div>
         </div>`);
       };
-    });
-
-});
-
-
-/**
- *
- */
-async function getReposData() {
-  const repos = [
-    { code: 'generator-jekyll-starter-kit', name: 'Jekyll Starter Kit Generator' },
-    { code: 'stories-of-a-lifelong-student', name: 'Stories Of A Lifelong Student' },
-    { code: 'challenges', name: 'Random Challenges Solutions' },
-    { code: 'angular-sanic-seed-project', name: 'Angular Sanic Seed Project' },
-    { code: 'google-keep-api', name: 'Google Keep API' },
-    { code: 'google-play-services-oauth', name: 'Google Play Services Oauth' },
-    { code: 'elmctron', name: 'Elmctron' },
-    { code: 'googletasks-app', name: 'Google Tasks App' },
-    { code: 'awesome-cyber-awesome', name: 'Awesome Cyber Awesome Lists' },
-    { code: 'awesome-drupal', name: 'Awesome Drupal List' },
-  ];
-
-  for (repo of repos) {
-    await fetch(`https://api.github.com/repos/nirgn975/${repo.code}`)
-      .then(response => response.json())
-      .then(data => {
-        repo.value = {
-          name: data.name,
-          description: data.description,
-          url: data.html_url,
-          stars: data.stargazers_count,
-          forks: data.forks,
-        };
+    }).then(_ => {
+      $('.projects .card .image').dimmer({
+        on: 'hover'
       });
-  };
-
-  return repos;
-}
+    });
+});
