@@ -2,6 +2,14 @@ $('.projects .card .image').dimmer({
   on: 'hover'
 });
 
+function switchTheme(element) {
+  if ($('body').attr('data-theme')) {
+    $('body').removeAttr('data-theme');
+  } else {
+    $('body').attr('data-theme', 'dark');
+  }
+}
+
 $(document).ready(function() {
   // Get lates blog posts.
   fetch('https://lifelongstudent.io/index.xml')

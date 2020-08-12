@@ -4,9 +4,22 @@ html, body {
   margin: 0;
 }
 
+:root {
+  --color-background: #E0E0E0;
+  --color-text: rgba(0, 0, 0, .87);
+  --color-border: rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] {
+  --color-background: #252627;
+  --color-text: #a9a9b3;
+  --color-border: rgba(255, 255, 255, .3);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background: #E0E0E0;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 #header {
@@ -48,8 +61,7 @@ body {
 .timeline-container .timeline-item {
 	padding: 1em 2em 2em;
 	position: relative;
-	color: rgba(0,0,0, .7);
-	border-left: 2px solid rgba(0,0,0, .3);
+	border-left: 2px solid var(--color-border);
 }
 
 .timeline-container .timeline-item h3 {
@@ -69,10 +81,10 @@ body {
 	left: -.6rem;
 	border-radius: 10px;
 	content: '';
-	border: 2px solid rgba(0,0,0, .3);
-	background: #E0E0E0;
+	border: 2px solid var(--color-border);
+	background: var(--color-background);
 }
 
 .timeline-container .timeline-item:last-child {
-  border-image: linear-gradient(to bottom, rgba(0,0,0, .3) 60%, rgba(0,0,0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, var(--color-border) 60%, var(--color-border)) 1 100%;
 }
