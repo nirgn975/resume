@@ -24,5 +24,7 @@
 
 	{{"<!-- Main Stylesheet -->"| safeHTML}}
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	{{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 </head>
