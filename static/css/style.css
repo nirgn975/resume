@@ -133,6 +133,15 @@ span.category-header i.icon {
   border-image: linear-gradient(to bottom, var(--color-border) 60%, var(--color-border)) 1 100%;
 }
 
+.education .badges {
+  display: flex;
+  justify-content: space-around;
+}
+
+.education .badges a:first-child {
+  display: flex;
+}
+
 .contact form .row {
   display: flex;
   justify-content: space-between;
