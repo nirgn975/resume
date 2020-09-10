@@ -36,12 +36,19 @@ async function getReposData() {
 function switchTheme(element) {
   if ($('html').attr('data-theme')) {
     $('html').removeAttr('data-theme');
+    localStorage.removeItem('theme');
   } else {
     $('html').attr('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
   }
 }
 
 $(document).ready(function() {
+  const theme = localStorage.getItem('theme');
+  if (theme == 'dark') {
+    $('html').attr('data-theme', 'dark');
+  }
+
   // Get lates blog posts.
   fetch('https://lifelongstudent.io/index.xml')
     .then(response => response.text())
