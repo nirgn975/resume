@@ -1,25 +1,27 @@
 {{ define "main" }}
 
-<div class="ui grid">
-  <div class="four wide column">
-    {{ partial "banner.html" . }}
-  </div>
-  <div class="eight wide column">
-    {{ partial "about-me.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "work.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "education.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "skills.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "projects.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "blog.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "talks.html" . }}
-    <div class="ui divider"></div>
-    {{ partial "contact.html" . }}
+<div class="uk-container">
+  <div uk-grid>
+    <div class="uk-width-1-4@m">
+      {{ partial "banner.html" . }}
+    </div>
+    <div class="content uk-width-3-4@m">
+      {{ partial "about-me.html" . }}
+      <hr>
+      {{ partial "work.html" . }}
+      <hr>
+      {{ partial "education.html" . }}
+      <hr>
+      {{ partial "skills.html" . }}
+      <hr>
+      {{ partial "projects.html" . }}
+      <hr>
+      {{ partial "blog.html" . }}
+      <hr>
+      {{ partial "talks.html" . }}
+      <hr>
+      {{ partial "contact.html" . }}
+    </div>
   </div>
 </div>
 

@@ -1,9 +1,3 @@
-html, body {
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
 :root {
   --color-background: #E0E0E0;
   --color-text: rgba(0, 0, 0, .87);
@@ -22,101 +16,250 @@ html, body {
   --color-header-background: #424242;
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--color-background);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background: var(--color-background);
   color: var(--color-text);
 }
 
-div.ui.card,
-.ui.form .field input,
-.ui.form .field textarea {
+.uk-card,
+input.uk-input,
+textarea.uk-textarea {
   background: var(--color-header-background);
   box-shadow: none;
 }
 
-div.ui.card .content .header,
-.ui.items .item .content .header,
-.ui.items .item .content .meta,
-.ui.form .field label {
+div.uk-card-header,
+div.uk-card-body,
+div.uk-card-footer {
+  padding: 1em;
   color: var(--color-text);
 }
 
-div.ui.card .content .meta, div.ui.card .content.extra {
-  color: var(--color-text-meta);
-}
-
-a {
-  color: #55bde2;
+.category-header h2,
+h3,
+span {
+  color: var(--color-text);
 }
 
 a:hover {
   color: var(--color-text-hover);
 }
 
+div.uk-container {
+  max-width: 1800px;
+}
+
+hr {
+  border-top: 1px solid var(--color-border);
+}
+
+span.category-header {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin: 1rem .5rem;
+  }
+}
+
+/*
+ * Laptop Banner section.
+ */
 #header {
   top: 0;
   position: fixed;
-  margin: 1%;
+  margin-top: 1%;
+  width: inherit;
+  padding-right: 5%;
+  max-width: 500px;
 
   .description {
     color: var(--color-text);
+    margin-bottom: 1rem;
   }
 
-  .content a {
+  .links a {
     color: var(--color-text);
   }
 
-  .content a:hover {
+  .links a:hover {
     color: var(--color-text-hover);
   }
 }
 
-span.category-header {
-  h2 {
-    display: inline-block;
-    margin-bottom: 1rem;
+/*
+ * Mobile Banner section.
+ */
+#mobile-banner {
+  .uk-offcanvas-bar {
+    padding: 0;
+    background: var(--color-header-background);
+    color: var(--color-text);
   }
 
-  i.icon {
-    font-size: 2em;
+  a {
+    color: var(--color-text);
+  }
+
+  a:hover {
+    color: var(--color-text-hover);
+  }
+
+  div.description {
+    padding: 1em;
+  }
+
+  div.links {
+    padding: 1em;
   }
 }
 
+/*
+ * About Me section.
+ */
+.about-me {
+  button.uk-icon-button {
+    background: var(--color-background);
+    color: var(--color-text);
+    margin-left: auto;
+  }
+}
+
+/*
+ * Education section.
+ */
+.education .badges {
+  display: flex;
+  justify-content: space-around;
+
+  a:first-child {
+    display: flex;
+  }
+}
+
+/*
+ * Skills section.
+ */
 .skills {
   div.block {
-    margin-left: 3%;
+    display: flex;
+    padding-left: 2rem;
   }
 
-  span {
-    margin-right: 1%;
+  span.devicons {
+    font-size: 1.6rem;
   }
 
-  img {
-    width: 1.5rem;
-    vertical-align: bottom;
-  }
-}
-
-.projects   {
-  div.card div.description {
-    margin: 4% 2%;
+  span.icon {
+    display: inline-flex;
+    margin-right: 1.5rem;
+    align-items: center;
   }
 
-  .repos .column div.ui.card  {
-    height: 100%;
+  i.fas, i.fad, span.devicons {
+    margin-right: .25rem;
   }
 }
 
+/*
+ * Blog & Projects section.
+ */
+.posts, .repos {
+  div.uk-card-header {
+      border: none;
+  }
 
-.blog {
-  .featured-image img {
+  h3.uk-card-title b {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+
+  div.uk-card-body {
+    padding-bottom: 4rem;
+  }
+
+  div.uk-card-footer {
+    position: absolute;
     width: 100%;
-    margin: .5rem 0;
+    bottom: 0;
+    margin-top: 1rem;
   }
 
-  .posts .column div.ui.card {
-    height: 100%;
+  a.uk-button-text {
+    color: var(--color-text);
+  }
+
+  span.right {
+    float: right;
+  }
+}
+
+/*
+ * Talks section.
+ */
+.talks {
+  div.uk-card-media-left {
+    width: 20rem;
+    height: 10rem;
+  }
+
+  div.uk-card-body {
+    h3 {
+      margin-bottom: .5rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/*
+ * Contact section.
+ */
+.contact {
+  margin-bottom: 1rem !important;
+
+  form {
+    .row {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 49%;
+      }
+    }
+  }
+
+  input, button, textarea {
+    border-color: none;
+  }
+
+  button.uk-button {
+    float: right;
+    background: #babbbc;
+  }
+
+  button.uk-button:hover {
+    float: right;
+    background: #888888;
+  }
+}
+
+button#mobile {
+  margin-top: 1rem;
+  position: fixed;
+  background: var(--color-header-background);
+  border: none;
+
+  rect {
+    color: var(--color-text);
   }
 }
 
@@ -143,7 +286,7 @@ span.category-header {
     	display: block;
     	top: 1.2rem;
     	position: absolute;
-    	left: -.6rem;
+    	left: -.55rem;
     	border-radius: 10px;
     	content: '';
     	border: 2px solid var(--color-border);
@@ -156,34 +299,26 @@ span.category-header {
   }
 }
 
-.education .badges {
-  display: flex;
-  justify-content: space-around;
-
-  a:first-child {
-    display: flex;
+@media only screen and (min-width: 960px) {
+  button#mobile {
+    display: none;
   }
 }
 
-.contact {
-  form {
-    .row {
-      display: flex;
-      justify-content: space-between;
-
-      .field {
-        width: 49%;
-      }
-    }
+@media only screen and (max-width: 960px) {
+  #header {
+    display: none;
   }
 
-  button.ui {
-    float: right;
-    background: #babbbc;
+  button#mobile {
+    left: 1rem;
   }
 
-  button.ui:hover {
-    float: right;
-    background: #888888;
+  div.uk-container {
+    margin-left: 4rem;
+  }
+
+  .skills div.block {
+    display: block;
   }
 }

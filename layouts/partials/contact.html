@@ -1,24 +1,27 @@
 <div class="contact">
   <span class="category-header">
-    <i class="envelope icon"></i>
+    <i class="fas fa-envelope fa-2x"></i>
     <h2>Contact</h2>
   </span>
 
-  <form class="ui form" action="https://formspree.io/nir@galon.io" method="POST">
-    <div class="row">
-      <div class="field">
-        <input type="text" name="first-name" placeholder="First Name">
+  <form action="https://formspree.io/nir@galon.io" method="POST">
+    <fieldset class="uk-fieldset">
+
+      <div class="uk-margin row">
+        <input class="uk-input" type="text" name="first-name" placeholder="First Name">
+        <input class="uk-input" type="text" name="last-name" placeholder="Last Name">
       </div>
-      <div class="field">
-        <input type="text" name="last-name" placeholder="Last Name">
+
+      <div class="uk-margin">
+        <input class="uk-input" type="email" name="email" placeholder="Email">
       </div>
-    </div>
-    <div class="field">
-      <input type="email" name="email" placeholder="Email">
-    </div>
-    <div class="field">
-      <textarea name="message-body"></textarea>
-    </div>
-    <button class="ui button" type="submit">Send</button>
+
+      <div class="uk-margin">
+        <textarea class="uk-textarea" name="message-body" rows="5"></textarea>
+      </div>
+
+      <button class="uk-button uk-button-default" type="submit">Send</button>
+
+    </fieldset>
   </form>
 </div>
