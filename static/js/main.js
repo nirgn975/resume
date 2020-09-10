@@ -34,10 +34,10 @@ async function getReposData() {
  * Add `dark` theme attribute to body.
  */
 function switchTheme(element) {
-  if ($('body').attr('data-theme')) {
-    $('body').removeAttr('data-theme');
+  if ($('html').attr('data-theme')) {
+    $('html').removeAttr('data-theme');
   } else {
-    $('body').attr('data-theme', 'dark');
+    $('html').attr('data-theme', 'dark');
   }
 }
 
@@ -64,35 +64,33 @@ $(document).ready(function() {
           const postImage = postText.match(regex);
           const postDescription = postText.replace(regex, '');
 
-          $('.posts').append(`<div class="four wide column">
-            <div class="ui card">
-              <div class="content">
-                <div class="header">${entity.getElementsByTagName("title")[0].textContent}</div>
-                <div class="meta">
-                  <span>${entity.getElementsByTagName("pubDate")[0].textContent.split(':')[0].slice(0, -2)}</span>
-                </div>
-                <div class="blurring dimmable image">
-                  <div class="ui dimmer">
-                    <div class="content">
-                      <div class="center">
-                        <a href="${entity.getElementsByTagName("link")[0].textContent}" target="_blank">
-                          <div class="ui inverted button">Go to Post</div>
-                        </a>
-                      </div>
+          $('.posts').append(`
+            <div>
+              <div class="uk-card uk-card-default">
+                <div class="uk-card-header">
+                  <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                      <h3 class="uk-card-title uk-margin-remove-bottom"><b>${entity.getElementsByTagName("title")[0].textContent}</b></h3>
+                      <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">${entity.getElementsByTagName("pubDate")[0].textContent.split(':')[0].slice(0, -2)}</time>
+                      </p>
                     </div>
                   </div>
+                </div>
+                <div class="uk-card-media-top">
                   ${postImage}
                 </div>
-                <p>${postDescription}</p>
+                <div class="uk-card-body">
+                  <p>${postDescription}</p>
+                </div>
+                <div class="uk-card-footer">
+                  <a href="${entity.getElementsByTagName("link")[0].textContent}" target="_blank" class="uk-button uk-button-text">Go to Post</a>
+                </div>
               </div>
             </div>
-          </div>`);
+          `);
         }
       }
-    }).then(_ => {
-      $('.blog .card .image').dimmer({
-        on: 'hover'
-      });
     });
 
   // Get repos data from GitHub.
@@ -101,44 +99,35 @@ $(document).ready(function() {
       repos.sort((a, b) => (a.value.stars < b.value.stars) ? 1 : -1);
 
       for (repo of repos) {
-        $('.repos').append(`<div class="four wide column">
-          <div class="ui card four wide column">
-            <div class="content">
-              <div class="header">${repo.name}</div>
-            </div>
-
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <a href="${repo.value.url}" target="_blank">
-                      <div class="ui inverted button">GitHub Repo Page</div>
-                    </a>
+        $('.repos').append(`
+          <div>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-expand">
+                    <h3 class="uk-card-title uk-margin-remove-bottom"><b>${repo.name}</b></h3>
                   </div>
                 </div>
               </div>
-              <img src="projects/stories-of-a-lifelong-student.jpg">
-            </div>
-
-            <div class="description">
-              <p>${repo.value.description}</p>
-            </div>
-            <div class="extra content">
-              <span class="left floated like">
-                <i class="star icon"></i>
-                ${repo.value.stars}
-              </span>
-              <span class="right floated star">
-                <i class="code branch icon"></i>
-                ${repo.value.forks}
-              </span>
+              <div class="uk-card-media-top">
+                <img src="projects/stories-of-a-lifelong-student.jpg">
+              </div>
+              <div class="uk-card-body">
+                <p>${repo.value.description}</p>
+              </div>
+              <div class="uk-card-footer">
+                <span class="left">
+                  <i class="fas fa-star"></i>
+                  ${repo.value.stars}
+                </span>
+                <span class="right">
+                  <i class="fal fa-code-merge"></i>
+                  ${repo.value.forks}
+                </span>
+              </div>
             </div>
           </div>
-        </div>`);
+        `);
       };
-    }).then(_ => {
-      $('.projects .card .image').dimmer({
-        on: 'hover'
-      });
     });
 });
