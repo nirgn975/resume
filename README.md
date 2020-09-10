@@ -1,5 +1,6 @@
-My Resume
+# My Resume
 
+![Continuous Deployment](https://github.com/nirgn975/resume/workflows/Continuous%20Deployment/badge.svg)
 
 My Resume (CV) website.
 The project build on Jekyll and using GulpJS, BrowserSync, and MinifyJS for the build process.
