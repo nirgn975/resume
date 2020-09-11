@@ -64,8 +64,13 @@ span.category-header {
   align-items: center;
 
   h2 {
-    margin: 1rem .5rem;
+    margin: .5rem;
+    font-size: 1.5rem;
   }
+}
+
+.uk-h3, h3 {
+  font-size: 1.25rem;
 }
 
 /*
@@ -111,7 +116,7 @@ span.category-header {
   a {
     color: var(--color-text);
 
-    i, span {
+    i {
       margin-right: .5rem;
     }
   }
@@ -148,6 +153,10 @@ span.category-header {
  * Skills section.
  */
 .skills {
+  h3 {
+    margin: 1rem 0 .75rem 0;
+  }
+
   div.block {
     display: flex;
     padding-left: 2rem;
@@ -269,7 +278,7 @@ button#mobile {
 	margin: 0 auto;
 
   .timeline-item {
-  	padding: 1em 2em 2em;
+  	padding: 1em 2em;
   	position: relative;
   	border-left: 2px solid var(--color-border);
 
