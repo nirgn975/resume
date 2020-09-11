@@ -70,6 +70,10 @@ $(document).ready(function() {
           const regex = /<div class="featured-image">\n.+\n.+<\/div>/g;
           const postImage = postText.match(regex);
           const postDescription = postText.replace(regex, '');
+          let editedPostText = postDescription.split(' ', 60).join(' ');
+          if (postDescription.split(' ').length > 60) {
+            editedPostText += ' ...';
+          }
 
           $('.posts').append(`
             <div>
@@ -88,7 +92,7 @@ $(document).ready(function() {
                   ${postImage}
                 </div>
                 <div class="uk-card-body">
-                  <p>${postDescription}</p>
+                  <p>${editedPostText}</p>
                 </div>
                 <div class="uk-card-footer">
                   <a href="${entity.getElementsByTagName("link")[0].textContent}" target="_blank" class="uk-button uk-button-text">Go to Post</a>
@@ -117,7 +121,9 @@ $(document).ready(function() {
                 </div>
               </div>
               <div class="uk-card-media-top">
-                <img src="projects/${repo.code}.webp">
+                <a href="${repo.value.url}" target="_blank">
+                  <img src="projects/${repo.code}.webp">
+                </a>
               </div>
               <div class="uk-card-body">
                 <p>${repo.value.description}</p>

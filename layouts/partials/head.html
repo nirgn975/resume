@@ -19,8 +19,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
 
 	{{ "<!--Favicon-->" | safeHTML }}
-	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ `images/apple-touch-icon.png` | absURL }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ `images/favicon-32x32.png` | absURL }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ `images/favicon-16x16.png` | absURL }}">
+	<link rel="manifest" href="{{ `images/site.webmanifest` | absURL }}">
 
 	{{"<!-- Main Stylesheet -->"| safeHTML}}
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
