@@ -3,38 +3,31 @@
 ![Continuous Deployment](https://github.com/nirgn975/resume/workflows/Continuous%20Deployment/badge.svg)
 
 My Resume (CV) website.
-The project build on Jekyll and using GulpJS, BrowserSync, and MinifyJS for the build process.
+The project build with Hugo and UIkit.
 
 ## Prerequisites
 
 To install this project, you'll need the following things installed on your machine.
 
-1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org).
+1. [Hugo](https://gohugo.io) - `$ brew install hugo`
+2. [Firebase CLI](https://github.com/firebase/firebase-tools)
 
-## Local Installation
+## Development
 
 1. Clone this repo, or download it into a directory of your choice.
-2. Inside the directory, run `npm install`.
+2. Inside the directory, run `hugo server -D`.
 
-## Usage
+## Deployment
 
-**Development mode**
+First you need firebase
 
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc.
-
-```shell
-$ npm run gulp
+```bash
+$ npm install -g firebase-tools
 ```
 
-**Deploy mode**
+Then easily deploy the blog
 
-You can easily deploy your site build to gh-pages branch with the command
-```shell
-$ npm run gulp deploy
+```bash
+$ export HUGO_ENV=production
+$ hugo && firebase deploy
 ```
-
-[license-image]: https://img.shields.io/badge/license-ISC-blue.svg
-[license-url]: https://github.com/nirgn975/Resume/blob/master/LICENSE
-[donate-image]: https://img.shields.io/badge/Donate-PayPal-lightgrey.svg
-[donate-url]: https://www.paypal.me/nirgn/2
