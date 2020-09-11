@@ -7,10 +7,10 @@ async function getReposData() {
     { code: 'stories-of-a-lifelong-student', name: 'Stories Of A Lifelong Student' },
     { code: 'challenges', name: 'Random Challenges Solutions' },
     { code: 'angular-sanic-seed-project', name: 'Angular Sanic Seed Project' },
-    { code: 'google-keep-api', name: 'Google Keep API' },
-    { code: 'google-play-services-oauth', name: 'Google Play Services Oauth' },
-    { code: 'googletasks-app', name: 'Google Tasks App' },
-    { code: 'awesome-cyber-awesome', name: 'Awesome Cyber Awesome Lists' },
+    // { code: 'google-keep-api', name: 'Google Keep API' },
+    // { code: 'google-play-services-oauth', name: 'Google Play Services Oauth' },
+    // { code: 'googletasks-app', name: 'Google Tasks App' },
+    // { code: 'awesome-cyber-awesome', name: 'Awesome Cyber Awesome Lists' },
   ];
 
   for (repo of repos) {
@@ -117,7 +117,7 @@ $(document).ready(function() {
                 </div>
               </div>
               <div class="uk-card-media-top">
-                <img src="projects/stories-of-a-lifelong-student.jpg">
+                <img src="projects/${repo.code}.webp">
               </div>
               <div class="uk-card-body">
                 <p>${repo.value.description}</p>
