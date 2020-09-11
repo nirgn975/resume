@@ -121,7 +121,9 @@ $(document).ready(function() {
                 </div>
               </div>
               <div class="uk-card-media-top">
-                <img src="projects/${repo.code}.webp">
+                <a href="${repo.value.url}" target="_blank">
+                  <img src="projects/${repo.code}.webp">
+                </a>
               </div>
               <div class="uk-card-body">
                 <p>${repo.value.description}</p>
