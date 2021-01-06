@@ -1,0 +1,3 @@
+[submodule "themes/devRes"]
+	path = themes/devRes
+	url = git@github.com:nirgn975/devRes.git
