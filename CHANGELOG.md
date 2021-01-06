@@ -1,3 +1,13 @@
+## [4.0.1](https://github.com/nirgn975/resume/compare/v4.0.0...v4.0.1) (2021-01-06)
+
+### Bug Fixes
+
+- fix accessibility issues ([23a4f1c](https://github.com/nirgn975/resume/commit/23a4f1cd7288611749f60dafbb0e60bee4e45f2a))
+
+### Other
+
+- Merge branch 'main' of github.com:nirgn975/resume into main ([3d240a9](https://github.com/nirgn975/resume/commit/3d240a9496e2888d7cb8c00032c1e6ec7e32d456))
+
 # [4.0.0](https://github.com/nirgn975/resume/compare/v3.0.0...v4.0.0) (2021-01-06)
 
 ### Continuous Integration
