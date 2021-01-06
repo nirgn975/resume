@@ -150,7 +150,7 @@ education:
       schoolUrl:
       timeStart: always
       timeEnd: always
-      text: "I'm very passionate about computers and technology, I always strive to learn more and keep myself up to date.<br>Here are some of the platforms I use do achive that goal:<br><br><a href='http://teamtreehouse.com/nirgalon' target='_blank'>Treehouse Profile</a> | <a href='https://www.codecademy.com/profiles/teraAce56031' target='_blank'> Codecademy Profile</a><br><div class='badges'><a href='https://www.codewars.com/users/nirgn' target='_blank'><img src='https://www.codewars.com/users/nirgn/badges/small'></a><a href='https://stackexchange.com/users/2325549' target='_blank'><img src='https://stackexchange.com/users/flair/2325549.png' width='208' height='58'></a><a href='https://tryhackme.com/p/nirgn975' target='_blank'><img src='https://tryhackme-badges.s3.amazonaws.com/nirgn975.png' alt='TryHackMe'></a></div>"
+      text: "I'm very passionate about computers and technology, I always strive to learn more and keep myself up to date.<br>Here are some of the platforms I use do achive that goal:<br><br><a href='http://teamtreehouse.com/nirgalon' target='_blank' rel='noreferrer'>Treehouse Profile</a> | <a href='https://www.codecademy.com/profiles/teraAce56031' target='_blank' rel='noreferrer'> Codecademy Profile</a><br><div class='badges'><a href='https://www.codewars.com/users/nirgn' target='_blank' rel='noreferrer'><img src='https://www.codewars.com/users/nirgn/badges/small' alt='codewars badge' rel='noreferrer'></a><a href='https://stackexchange.com/users/2325549' target='_blank' rel='noreferrer'><img src='https://stackexchange.com/users/flair/2325549.png' width='208' height='58' alt='stack exchange badge'></a><a href='https://tryhackme.com/p/nirgn975' target='_blank' rel='noreferrer'><img src='https://tryhackme-badges.s3.amazonaws.com/nirgn975.png' alt='TryHackMe'></a></div>"
       list:
         enable: False
         items:
@@ -164,7 +164,7 @@ education:
       list:
         enable: True
         items:
-          - text: "The <a href='https://www.udemy.com/course/practical-ethical-hacking' target='_blank'>program syllabus</a> include: Networking, Active Directory exploitation, hack Wireless networks, OWASP Top 10, how to write a Pentest Report, etc"
+          - text: "The <a href='https://www.udemy.com/course/practical-ethical-hacking' target='_blank' rel='noreferrer'>program syllabus</a> include: Networking, Active Directory exploitation, hack Wireless networks, OWASP Top 10, how to write a Pentest Report, etc"
     - course: Deep Learning Foundations
       schoolName: Udacity
       schoolUrl: hhttps://www.udacity.com
@@ -174,8 +174,8 @@ education:
       list:
         enable: True
         items:
-          - text: "The <a href='https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101' target='_blank'>program syllabus</a> include: Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Adversarial Networks"
-          - text: "The 5 projects I built during the program - <a href='https://github.com/nirgn975/DLND' target='_blank'>GitHub</a>"
+          - text: "The <a href='https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101' target='_blank' rel='noreferrer'>program syllabus</a> include: Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Adversarial Networks"
+          - text: "The 5 projects I built during the program - <a href='https://github.com/nirgn975/DLND' target='_blank' rel='noreferrer'>GitHub</a>"
           - text: "<a href='education/nd101.pdf' download>Completion certificate</a>"
     - course: Bachelor's degree in Computer Science and Business Administration
       schoolName: The Open University of Israel
@@ -187,7 +187,7 @@ education:
         enable: True
         items:
           - text: "Seminar paper in Business Ethics course (grade: 85)"
-          - text: "Final project was in Java: <a href='https://github.com/nirgn975/Book4You' target='_blank'>GitHub Repo</a> (grade: 95)"
+          - text: "Final project was in Java: <a href='https://github.com/nirgn975/Book4You' target='_blank' rel='noreferrer'>GitHub Repo</a> (grade: 95)"
           - text: "GPA: 76"
     - course: High School diploma
       schoolName: Ora Modi'im High School
