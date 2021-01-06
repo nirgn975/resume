@@ -1,9 +1,10 @@
 # My Resume
 
-![Continuous Deployment](https://github.com/nirgn975/resume/workflows/Continuous%20Deployment/badge.svg) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/nirgn975/devRes)](https://github.com/nirgn975/devRes/releases) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+![Continuous Deployment](https://github.com/nirgn975/resume/workflows/Continuous%20Deployment/badge.svg) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/nirgn975/resume)](https://github.com/nirgn975/resume/releases) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 My Resume (CV) website.
-The project build with Hugo and UIkit.
+
+The project build with Hugo and uses [devRes theme](https://github.com/nirgn975/devRes).
 
 ## Prerequisites
 
