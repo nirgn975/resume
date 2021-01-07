@@ -4,6 +4,9 @@ title = "Nir Galon Resume"
 theme = "devRes"
 
 [params]
+  description = "Nir Galon resume"
+  author = "nirgn975"
+
   [params.light]
     background = "#E0E0E0"
     text = "#333333"

@@ -147,7 +147,7 @@ education:
   items:
     - course: Self Learning
       schoolName: Self Learning
-      schoolUrl:
+      schoolUrl: https://nir.galon.io
       timeStart: always
       timeEnd: always
       text: "I'm very passionate about computers and technology, I always strive to learn more and keep myself up to date.<br>Here are some of the platforms I use do achive that goal:<br><br><a href='http://teamtreehouse.com/nirgalon' target='_blank' rel='noreferrer'>Treehouse Profile</a> | <a href='https://www.codecademy.com/profiles/teraAce56031' target='_blank' rel='noreferrer'> Codecademy Profile</a><br><div class='badges'><a href='https://www.codewars.com/users/nirgn' target='_blank' rel='noreferrer'><img src='https://www.codewars.com/users/nirgn/badges/small' alt='codewars badge' rel='noreferrer'></a><a href='https://stackexchange.com/users/2325549' target='_blank' rel='noreferrer'><img src='https://stackexchange.com/users/flair/2325549.png' width='208' height='58' alt='stack exchange badge'></a><a href='https://tryhackme.com/p/nirgn975' target='_blank' rel='noreferrer'><img src='https://tryhackme-badges.s3.amazonaws.com/nirgn975.png' alt='TryHackMe'></a></div>"
