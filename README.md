@@ -15,7 +15,7 @@ To install this project, you'll need the following things installed on your mach
 
 ## Development
 
-1. Clone this repo, or download it into a directory of your choice.
+1. Clone this repo with the recursive flag: `git clone --recurse-submodules git@github.com:nirgn975/resume.git`.
 2. Inside the directory, run `hugo server -D`.
 
 ## Deployment
