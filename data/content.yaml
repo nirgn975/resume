@@ -91,7 +91,7 @@ work:
         items:
           - text: Take part in Hackita02 program and one of the founders of "Ways Of Time" project that enable the National Library of Israel to upload and geotag their geographic maps collection, and open them to the public (Python, Django, Leaflet, PostGIS, MDL).
           - text: Lead developer of version 2.x of the "Open Pension" project. The project mission is to reveal what happens behind the Israeli pension market, while enabling the public to trace the money and expose corruption (Python, Django, Scrapy, PostgreSQL, Angular, ngrx, d3.js).
-          - text: <a href="https://github.com/nirgn975/WaysOfTime" target="_blank">Ways Of Time Repo</a> | <a href="https://github.com/hasadna/open_pension" target="_blank">Open Pension Website Repo</a> | <a href="https://github.com/hasadna/open_pension_scraper" target="_blank">Open Pension Crawler Repo</a>
+          - text: <a href='https://github.com/nirgn975/WaysOfTime' target='_blank' rel='noreferrer'>Ways Of Time Repo</a> | <a href='https://github.com/hasadna/open_pension' target='_blank' rel='noreferrer'>Open Pension Website Repo</a> | <a href='https://github.com/hasadna/open_pension_scraper' target='_blank' rel='noreferrer'>Open Pension Crawler Repo</a>
     - position: Junior Full Stack Software Engineer
       employerName: Restart Group - IT | WEB | Mobile | People
       employerUrl: https://www.linkedin.com/company/2484049
@@ -176,7 +176,7 @@ education:
         items:
           - text: "The <a href='https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101' target='_blank' rel='noreferrer'>program syllabus</a> include: Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Adversarial Networks"
           - text: "The 5 projects I built during the program - <a href='https://github.com/nirgn975/DLND' target='_blank' rel='noreferrer'>GitHub</a>"
-          - text: "<a href='education/nd101.pdf' download>Completion certificate</a>"
+          - text: "<a href='education/nd101.pdf' rel='noreferrer' download>Completion certificate</a>"
     - course: Bachelor's degree in Computer Science and Business Administration
       schoolName: The Open University of Israel
       schoolUrl: https://www.linkedin.com/edu/school?id=162040&trk=edu-cp-title
