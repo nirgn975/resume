@@ -1,3 +1,13 @@
+## [4.0.2](https://github.com/nirgn975/resume/compare/v4.0.1...v4.0.2) (2021-01-07)
+
+### Bug Fixes
+
+- fix doc clone command ([b91aaee](https://github.com/nirgn975/resume/commit/b91aaee0542cb9f6d004735f2899b78b4a58d9f7))
+
+### Other
+
+- optimize for lighthouse (#80) ([5fa9f2d](https://github.com/nirgn975/resume/commit/5fa9f2dd1d74a7bed660ec5c5d2e050e7049e2c8)), closes [#80](https://github.com/nirgn975/resume/issues/80)
+
 ## [4.0.1](https://github.com/nirgn975/resume/compare/v4.0.0...v4.0.1) (2021-01-06)
 
 ### Bug Fixes
