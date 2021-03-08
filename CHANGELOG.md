@@ -1,3 +1,17 @@
+# [4.1.0](https://github.com/nirgn975/resume/compare/v4.0.3...v4.1.0) (2021-03-08)
+
+### Continuous Integration
+
+- update ci/cd when push to main ([3ec3d5a](https://github.com/nirgn975/resume/commit/3ec3d5a8daf3fa38609807846ebae3fab7f4eb9f))
+
+### Features
+
+- update devRes theme and edit content ([cddfaa0](https://github.com/nirgn975/resume/commit/cddfaa0778546e7e8b59c896091338025027a4b2))
+
+### Other
+
+- Merge branch 'main' of github.com:nirgn975/resume into main ([e0c0ade](https://github.com/nirgn975/resume/commit/e0c0ade8f068347c1d7fea86ce6f84c1d65dd045))
+
 ## [4.0.3](https://github.com/nirgn975/resume/compare/v4.0.2...v4.0.3) (2021-01-07)
 
 ### Bug Fixes
