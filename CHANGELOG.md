@@ -1,3 +1,9 @@
+## [4.0.3](https://github.com/nirgn975/resume/compare/v4.0.2...v4.0.3) (2021-01-07)
+
+### Bug Fixes
+
+- sEO lighthouse errors ([210c39d](https://github.com/nirgn975/resume/commit/210c39d42209c75ae8c1684cd265205e86e7402d))
+
 ## [4.0.2](https://github.com/nirgn975/resume/compare/v4.0.1...v4.0.2) (2021-01-07)
 
 ### Bug Fixes
