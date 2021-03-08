@@ -38,19 +38,19 @@ work:
   enable: True
   items:
     - position: Lead Software Engineer
-      employerName: Verint
-      employerUrl: https://www.verint.com
+      employerName: Cognyte (formerly a Verint company)
+      employerUrl: https://www.linkedin.com/company/cognyte
       timeStart: 01/2020
       timeEnd: Present
       text:
       list:
         enable: True
         items:
-          - text: WebintPro LTD was acquired by Verint.
-          - text: Write a compelete data pipeline using Airflow to load data from GCP Storage files to PostgreSQL.
+          - text: WebintPro LTD was acquired by Cognyte (formerly a Verint company).
+          - text: Write a compelete data pipeline using RabbitMQ message broker.
           - text: Rewrite the backend microservices from Express.js to NestJS.
-          - text: Implement a new design for the main app in Angular.
-          - text: Build a CI/CD for an electron desktop application using GitHub and GCP.
+          - text: Implement a new design for the main app in Angular using Tailwind CSS.
+          - text: Build a CI/CD for an Electron desktop application using GitHub actions and GCP.
     - position: Lead Software Engineer
       employerName: webintPro Ltd
       employerUrl: https://www.linkedin.com/company/3296384
@@ -205,91 +205,93 @@ skills:
   items:
     - family: Architecture
       items:
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: Microservices
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: RESTful APIs
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: GraphQL
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: Data Structures & Algorithms
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: SasS / PasS
-        - icon: <span class="devicons devicons-code"></span>
+        - icon: <i class="fas fa-code"></i>
           text: TDD (Test Driven Development)
     - family: FrontEnd
       items:
-        - icon: <span class="devicons devicons-html5"></span>
+        - icon: <i class="devicon devicon-html5-plain"></i>
           text: HTML
-        - icon: <span class="devicons devicons-sass"></span>
-          text: CSS / SCSS (Bootstrap, UIkit, Material Design)
-        - icon: <span class="devicons devicons-nodejs_small"></span>
+        - icon: <i class="devicon devicon-sass-original"></i>
+          text: CSS / SCSS (Bootstrap, UIkit, Tailwind CSS, Material Design)
+        - icon: <i class="devicon devicon-javascript-plain"></i>
           text: JavaScript (jQuery, Ajax)
-        - icon: <span class="devicons devicons-angular"></span>
+        - icon: <i class="devicon devicon-angularjs-plain"></i>
           text: Angular (cli, ngrx, material)
     - family: BackEnd
       items:
-      - icon: <span class="devicons devicons-java"></span>
+      - icon: <i class="devicon devicon-java-plain"></i>
         text: Java (Spring)
-      - icon: <span class="devicons devicons-nodejs"></span>
+      - icon: <i class="devicon devicon-nodejs-plain"></i>
         text: Node.js (TypeScript, Express.js, NestJS, Mocha)
-      - icon: <span class="devicons devicons-python"></span>
+      - icon: <i class="devicon devicon-python-plain"></i>
         text: Python (Django, Flask, Sanic)
-      - icon: <span class="devicons devicons-go"></span>
+      - icon: <i class="devicon devicon-go-plain"></i>
         text: Golang
     - family: Platforms
       items:
-        - icon: <span class="devicons devicons-linux"></span>
+        - icon: <i class="devicon devicon-linux-plain"></i>
           text: Linux
-        - icon: <span class="devicons devicons-git"></span>
+        - icon: <i class="devicon devicon-git-plain"></i>
           text: Git
-        - icon: <span class="devicons devicons-github_badge"></span>
+        - icon: <i class="devicon devicon-github-original"></i>
           text: GitHub
     - family: Tools
       items:
-        - icon: <span class="devicons devicons-terminal"></span>
+        - icon: <i class="fas fa-terminal"></i>
           text: Bash
-        - icon: <span class="devicons devicons-jekyll_small"></span>
+        - icon: <i class="fas fa-pencil-alt"></i>
           text: Jekyll
-        - icon: <span class="devicons devicons-markdown"></span>
+        - icon: <i class="fab fa-markdown"></i>
           text: Hugo
-        - icon: <span class="devicons devicons-atom"></span>
+        - icon: <i class="devicon devicon-atom-original"></i>
           text: Electron
-        - icon: <span class="devicons devicons-gulp"></span>
+        - icon: <i class="devicon devicon-gulp-plain"></i>
           text: Gulp
-        - icon: <span class="devicons devicons-ionic"></span>
+        - icon: <i class="devicon devicon-ionic-original"></i>
           text: Ionic
-        - icon: <span class="devicons devicons-yeoman"></span>
+        - icon: <i class="fas fa-user-ninja"></i>
           text: Yeoman
+        - icon: <i class="fas fa-rabbit-fast"></i>
+          text: RabbitMQ
     - family: Databases
       items:
-        - icon: <span class="devicons devicons-postgresql"></span>
+        - icon: <i class="devicon devicon-postgresql-plain"></i>
           text: PostgreSQL
-        - icon: <span class="devicons devicons-mongodb"></span>
+        - icon: <i class="devicon devicon-mongodb-plain"></i>
           text: MongoDB
-        - icon: <span class="devicons devicons-database"></span>
+        - icon: <i class="fas fa-database"></i>
           text: RethinkDB
-        - icon: <span class="devicons devicons-redis"></span>
+        - icon: <i class="devicon devicon-redis-plain"></i>
           text: Redis
-        - icon: <span class="devicons devicons-firebase"></span>
+        - icon: <i class="devicon devicon-firebase-plain"></i>
           text: Firebase
     - family: Clouds & Devops
       items:
-        - icon: <span class="devicons devicons-aws"></span>
-          text: AWS</span>
-        - icon: <span class="devicons devicons-docker"></span>
+        - icon: <i class="devicon devicon-amazonwebservices-original"></i>
+          text: AWS
+        - icon: <i class="devicon devicon-docker-plain"></i>
           text: Docker
-        - icon: <span class="devicons devicons-docker"></span>
+        - icon: <i class="devicon devicon-kubernetes-plain"></i>
           text: Kubernetes
-        - icon: <span class="devicons devicons-digital-ocean"></span>
+        - icon: <i class="fab fa-digital-ocean"></i>
           text: Digital Ocean
-        - icon: <span class="devicons devicons-google-cloud-platform"></span>
+        - icon: <i class="devicon devicon-googlecloud-plain"></i>
           text: Google Cloud Platform
         - icon: <i class="fas fa-project-diagram"></i>
           text: CI / CD
         - icon: <i class="fas fa-server"></i>
           text: Load Balancing
-        - icon: <span class="devicons devicons-nginx"></span>
+        - icon: <i class="devicon devicon-nginx-original"></i>
           text: NGINX
     - family: Others
       items:
