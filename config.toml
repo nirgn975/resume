@@ -24,7 +24,7 @@ theme = "devRes"
   [params.analytics]
     [params.analytics.plausible]
       enable = true
-      domain = "johndoe.com"
+      domain = "nir.galon.io"
     [params.analytics.google]
       enable = false
       id = "UA-xxxxxxxx-1"
