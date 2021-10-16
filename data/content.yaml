@@ -37,7 +37,7 @@ aboutMe:
 work:
   enable: True
   items:
-    - position: Lead Software Engineer
+    - position: Lead Software Engineer (Team Leader)
       employerName: Cognyte (formerly a Verint company)
       employerUrl: https://www.linkedin.com/company/cognyte
       timeStart: 01/2020
@@ -51,7 +51,7 @@ work:
           - text: Rewrite the backend microservices from Express.js to NestJS.
           - text: Implement a new design for the main app in Angular using Tailwind CSS.
           - text: Build a CI/CD for an Electron desktop application using GitHub actions and GCP.
-    - position: Lead Software Engineer
+    - position: Lead Software Engineer (Team Leader)
       employerName: webintPro Ltd
       employerUrl: https://www.linkedin.com/company/3296384
       timeStart: 02/2017
@@ -60,14 +60,14 @@ work:
       list:
         enable: True
         items:
-          - text: I formed a team (4 full stack developers) to develop and maintains a system to fetch, analyze, and save big data from social networks.
+          - text: Formed a team (4 full stack developers) to develop and maintains a system to fetch, analyze, and save big data from social networks.
           - text: The backend services was written in Python with Sanic framework and Node.js with Express.js framework.
           - text: The frontend dashboard was written in Angular using ngrx, material, and D3.js.
           - text: Using Docker & Kubernetes for deployment on Google Cloud Platform, with a compelete CI/CD (tests, code reviews, dev environment, etc).
           - text: Implements a Microservices architecture with Pub/Sub.
           - text: Using Deep Learning methodologies to extract and analyze data. And save it in MongoDB, and Redis Databases.
           - text: Created the project from scratch, build the team, manage it, doing code reviews, etc.
-    - position: Full Stack Software Engineer
+    - position: Senior Full Stack Software Engineer
       employerName: Gizra - Internet Solutions
       employerUrl: https://www.linkedin.com/company/1776824
       timeStart: 12/2015
@@ -92,7 +92,7 @@ work:
           - text: Take part in Hackita02 program and one of the founders of "Ways Of Time" project that enable the National Library of Israel to upload and geotag their geographic maps collection, and open them to the public (Python, Django, Leaflet, PostGIS, MDL).
           - text: Lead developer of version 2.x of the "Open Pension" project. The project mission is to reveal what happens behind the Israeli pension market, while enabling the public to trace the money and expose corruption (Python, Django, Scrapy, PostgreSQL, Angular, ngrx, d3.js).
           - text: <a href='https://github.com/nirgn975/WaysOfTime' target='_blank' rel='noreferrer'>Ways Of Time Repo</a> | <a href='https://github.com/hasadna/open_pension' target='_blank' rel='noreferrer'>Open Pension Website Repo</a> | <a href='https://github.com/hasadna/open_pension_scraper' target='_blank' rel='noreferrer'>Open Pension Crawler Repo</a>
-    - position: Junior Full Stack Software Engineer
+    - position: Full Stack Software Engineer
       employerName: Restart Group - IT | WEB | Mobile | People
       employerUrl: https://www.linkedin.com/company/2484049
       timeStart: 07/2015
